@@ -1,0 +1,9 @@
+.recipe--comments {
+    margin-bottom: 10px;
+    @screen md {
+        margin: 0;
+    }
+    @screen lg {
+        margin: 0;
+    }
+}

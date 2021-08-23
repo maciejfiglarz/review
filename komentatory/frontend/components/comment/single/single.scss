@@ -1,0 +1,135 @@
+@import "../../../common/colors";
+@import "../../../common/variables";
+@import "../../../common/grid";
+@import "../../../common/form";
+@import "../../../common/mixins";
+
+.comment--creator--component {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    > .cover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-background;
+        opacity: 0.8;
+    }
+    > .avatar {
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        // img {
+        //     max-width: 100%;
+        //     border-radius: 50%;
+        // }
+    }
+    > .content {
+        width: calc(100% - 50px);
+        > .bottom {
+            margin: 3px 0 15px 0;
+            display: flex;
+            justify-content: space-between;
+            .button {
+                max-width: 80px;
+                font-size: 12px;
+                font-weight: bold;
+                padding: 8px 16px;
+            }
+        }
+        .textarea {
+            // background: $color-background-light;
+            // border-radius: $border-radius;
+            // width:100%;
+            font-size: 13px !important;
+            min-height: 44px;
+            color: $color-white;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            padding: 10px 10px;
+            * {
+                color: $color-white;
+                font-size: 13px !important;
+            }
+            .author {
+                background: $color-background;
+                font-weight: bold;
+                color: $color-primary;
+                border-radius: 2px;
+                padding: 4px;
+                cursor: pointer;
+            }
+            .text {
+                width: 100%;
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+
+.comment--single--item {
+    display: flex;
+    margin-bottom: 30px;
+
+    > .avatar {
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        margin-right: 10px;
+        img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+    }
+    > .content {
+        width: 100%;
+        > .top {
+            display: flex;
+            margin: 0 0 5px 2px;
+            > .name {
+                font-weight: bold;
+            }
+            > .date {
+                margin-left: 5px;
+            }
+        }
+        > .text {
+            background-color: $color-background-light;
+            border-radius: $border-radius-small;
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 5px;
+            .author {
+                font-weight: bold;
+                color: $color-primary !important;
+            }
+        }
+        > .bottom {
+        }
+    }
+}
+
+.comment--single--more {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+.comment--single--list {
+    .sublist {
+        padding-left: 40px;
+    }
+}

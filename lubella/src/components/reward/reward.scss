@@ -1,0 +1,297 @@
+@use "./../../common/grid.scss" as *;
+@use "./../../common/colors.scss" as *;
+@use "./../../common/mixins.scss" as *;
+
+// *{
+//     outline:1px solid red;
+// }
+
+.reward--component {
+    padding-bottom: 80px;
+    position: relative;
+    z-index:1;
+     .brick {
+        display: none;
+    }
+    &.-profile {
+        >.container {
+            @include lg-up(){
+                position: relative !important;
+            }
+        }
+         .brick--top--left {
+            position: absolute;
+            left: 0;
+            top: -110px;
+            transform: scale(0.5);
+            transform-origin: top left;
+            // outline: 2px solid red;
+            display: block !important;
+            @include sm-up() {
+                transform: scale(0.5);
+                top: -110px;
+            }
+            @include md-up() {
+                transform: scale(0.8);
+                top: -150px;
+            }
+            @include lg-up() {
+                top: 340px;
+                left: -25px;
+            }
+            @include xxl-up() {
+                top: 420px;
+                left: -100px;
+            }
+        }
+        .brick--top--right {
+            position: absolute;
+            right: 10px;
+            top: -60px;
+            transform: scale(0.5);
+            transform-origin: top right;
+            // outline: 2px solid green;
+            display: block !important;
+
+            @include sm-up() {
+                transform: scale(0.5);
+                top: -60px;
+            }
+            @include md-up() {
+                transform: scale(0.8);
+                top: -80px;
+            }
+            @include lg-up() {
+                top: 390px;
+                right: -25px;
+            }
+            @include xxl-up() {
+                right: -60px;
+            }
+        }
+        .brick--bottom--left {
+            position: absolute;
+            left: 0;
+            top: 700px;
+            transform: scale(0.5);
+            transform-origin: top left;
+            display: block !important;
+            // outline: 2px solid yellow;
+            @include sm-up() {
+                transform: scale(0.5);
+                top: 530px;
+            }
+            @include md-up() {
+                transform: scale(0.8);
+                top: 710px;
+                left:25px;
+            }
+            @include lg-up() {
+                top: -27px;
+                left:10px;
+            }
+        }
+         .brick--lg--right {
+            position: absolute;
+            right: 10px;
+            top: 900px;
+            transform: scale(0.5);
+            transform-origin: top right;
+            // outline: 2px solid pink;
+            @include md-up() {
+                transform: scale(0.8);
+            }
+            @include lg-up() {
+                top: 130px;
+                transform: scale(0.8);
+                display: block !important;
+            }
+        }
+         .brick--single {
+            position: absolute;
+            left: 0;
+            top: 500px;
+            transform: scale(0.5);
+            transform-origin: top left;
+            display: block !important;
+
+            @include sm-up() {
+                transform: scale(0.5);
+                top: 420px;
+            }
+            @include md-up() {
+                transform: scale(0.8);
+                top: 410px;
+                left:0;
+            }
+            @include lg-up() {
+                display: none !important;
+            }
+        }
+         .brick--single1 {
+            position: absolute;
+            right: 0;
+            top: 520px;
+            transform: scale(0.5);
+            transform-origin: top right;
+            display: block !important;
+
+            @include sm-up() {
+                transform: scale(0.5);
+                right: 440px;
+            }
+            @include md-up() {
+                transform: scale(0.8);
+                top: 430px;
+                right:0;
+            }
+            @include lg-up() {
+                display: none !important;
+            }
+        }
+    }
+}
+
+.reward--content {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include lg-up() {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.reward--item {
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+
+    img {
+        max-width: 60%;
+        @include sm-up() {
+            max-width: 90%;
+            padding: 0;
+        }
+    }
+    &.-mystery {
+        @include sm-up() {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @include lg-up() {
+            width: 33.333%;
+        }
+    }
+    &.-box {
+        @include sm-up() {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        @include lg-up() {
+            width: 33.333%;
+        }
+    }
+    &.-guarantee {
+        @include sm-up() {
+            display: flex;
+            img {
+                @include sm-up() {
+                    max-width: 100%;
+                }
+            }
+            > .label {
+                width: 55%;
+                @include lg-up() {
+                    width: 100%;
+                }
+            }
+            > .image {
+                width: 45%;
+                @include lg-up() {
+                    width: 100%;
+                }
+            }
+            > .label > .value {
+                font-size: 24px;
+            }
+        }
+        @include lg-up() {
+            display: block;
+            width: 33.333%;
+        }
+    }
+    > .label {
+        text-align: center;
+        margin-top: 20px;
+        > .info {
+            font-size: 24px;
+            font-weight: bold;
+            @include lg-up (){
+                margin-bottom:10px;
+            }
+        }
+        > .value {
+        }
+    }
+}
+
+// .reward--item {
+//     padding: 0 15px;
+//     display:flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     @include lg-up(){
+//         width: 33%;
+//         padding: 0 4%;
+//     }
+//     &.-mystery {
+//         width: 50%;
+//         @include lg-up() {
+//             width: 33%;
+//         }
+//     }
+//     &.-box {
+//         width: 50%;
+//         @include lg-up() {
+//             width: 33%;
+//         }
+//     }
+//     &.-guarantee {
+//         display: flex;
+//         @include lg-up() {
+//             display: block;
+//         }
+//         > .label {
+//             width: 50%;
+//             @include lg-up() {
+//                 width: 100%;
+//             }
+//         }
+//         > .image {
+//             width: 50%;
+//             @include lg-up() {
+//                 width: 100%;
+//             }
+//         }
+//         >.label >.value {
+//             font-size:24px;
+//         }
+//     }
+//     > .label {
+//         text-align: center;
+//         margin-top: 20px;
+//         > .info {
+//             font-size: 24px;
+//             font-weight: bold;
+//         }
+//         > .value {
+
+//         }
+//     }
+// }

@@ -1,0 +1,690 @@
+@use "./../../common/grid.scss" as *;
+@use "./../../common/colors.scss" as *;
+@use "./../../common/variables.scss" as *;
+@use "./../../common/mixins.scss" as *;
+
+.step--component {
+    background: $blue-light;
+    position: relative;
+    &:after {
+        @include gradientReverse();
+        content: "";
+        top: 1px;
+        transform: translateY(-100%);
+        z-index: -1;
+        width: 100%;
+        height: 1000px;
+        position: absolute;
+        @include sm-up() {
+            height: 600px;
+        }
+        @include lg-up() {
+            height: 500px;
+        }
+    }
+}
+
+.step--first--component {
+    @include sm-up() {
+        // outline:2px solid red;
+    }
+    .brick--top--left {
+        position: absolute;
+        left: 0;
+        top: 160px;
+        transform: scale(0.5);
+        transform-origin: top left;
+
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include xl-up() {
+            transform: scale(0.7);
+            top: -20px;
+            left: -20px;
+        }
+        @include xxl-up() {
+            // transform: scale(1);
+            top: -30px;
+            left: -60px;
+        }
+    }
+    .brick--top--right {
+        position: absolute;
+        right: 6%;
+        top: 220px;
+        transform: scale(0.5) scaleX(-1) translateX(100%);
+        transform-origin: top right;
+
+        @media screen and (min-width: 480px) {
+            top: 150px;
+        }
+        @include sm-up() {
+            top: 170px;
+        }
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include xl-up() {
+            transform: scale(0.7) scaleX(-1) translateX(100%);
+            top: 70px;
+            right: 0;
+        }
+        @include xxl-up() {
+            transform: scale(0.7) scaleX(-1) translateX(100%);
+            top: 20px;
+            right: -80px;
+        }
+    }
+    .brick--middle--left {
+        position: absolute;
+        left: -5px;
+        top: 30%;
+        z-index: 1;
+        transform: scale(0.8);
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include lg-up() {
+            display: none;
+        }
+    }
+    .brick--middle--right {
+        position: absolute;
+        right: -5px;
+        top: 35%;
+        z-index: 1;
+        transform: scale(0.8);
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include lg-up() {
+            display: none;
+        }
+    }
+}
+
+.step--second--component {
+    background: $blue-light;
+    position: relative;
+    padding: 80px 0 80px 0;
+    @include lg-up() {
+        // outline:1px solid red;
+    }
+    > .container {
+        position: relative;
+    }
+
+    .brick--single--left {
+        position: absolute;
+        left: -2px;
+        top: 70%;
+        z-index: 1;
+        // outline:2px solid yellow;
+        transform: scale(0.8);
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include lg-up() {
+            display: none;
+        }
+    }
+    .brick--single--right {
+        position: absolute;
+        right: -2px;
+        top: 75%;
+        z-index: 1;
+        // outline:2px solid green;
+        transform: scale(0.8);
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include lg-up() {
+            display: none;
+        }
+    }
+
+    .brick--top--left {
+        position: absolute;
+        left: -1px;
+        top: 120px;
+        transform: scale(0.5);
+        // outline:2px solid purple;
+        transform-origin: top left;
+
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include xl-up() {
+            top: 280px;
+            left: 1%;
+            transform: scale(0.6);
+        }
+        @include xxl-up() {
+            top: 280px;
+            left: 2%;
+            transform: scale(0.6);
+        }
+    }
+
+    .brick--top--right {
+        position: absolute;
+        right: 6%;
+        top: 100px;
+        transform: scale(0.5) scaleX(-1) translateX(100%);
+        transform-origin: top right;
+        // outline:2px solid pink;
+        @include sm-up() {
+            top: 130px;
+        }
+        @include md-up() {
+            transform: scale(0.8);
+        }
+        @include xl-up() {
+            transform: scale(0.7) scaleX(-1) translateX(100%);
+            top: 70px;
+            right: 0;
+        }
+        @include xxl-up() {
+            transform: scale(0.7) scaleX(-1) translateX(100%);
+            top: 470px;
+            right: -60px;
+        }
+    }
+
+    .brick--middle--left {
+        position: absolute;
+        left: 4%;
+        top: 50%;
+        transform: scale(0.5);
+        transform-origin: top left;
+        display: none;
+        // outline:2px solid red;
+
+        @include md-up() {
+            transform: scale(0.8);
+            display: block;
+        }
+        @include xl-up() {
+            transform: scale(0.7);
+            top: -20px;
+            left: -20px;
+        }
+        @include xxl-up() {
+            // transform: scale(1);
+            top: -30px;
+            left: -60px;
+        }
+    }
+
+    .brick--bottom--left {
+        position: absolute;
+        left: 10%;
+        bottom: -103px;
+        transform: scale(0.6);
+        transform-origin: top left;
+        // outline:2px solid orange;
+        @include sm-up() {
+            left: 0;
+        }
+        @include md-up() {
+            bottom: -92px;
+            transform: scale(0.8);
+        }
+        @include xl-up() {
+            left: 20%;
+        }
+        @include xxl-up() {
+            left: 0;
+        }
+    }
+    .brick--bottom--right {
+        position: absolute;
+        right: 5%;
+        bottom: -103px;
+        transform: scale(0.6);
+        transform-origin: top right;
+        // height:30px;
+        // outline:2px solid blue;
+        @include sm-up() {
+            right: 0;
+        }
+        @include md-up() {
+            bottom: -92px;
+            transform: scale(0.8);
+        }
+        @include xl-up() {
+            right: 20%;
+        }
+        @include xxl-up() {
+            right: 0;
+        }
+    }
+    .brick--xxl--right {
+        position: absolute;
+        right: 0px;
+        top: 160px;
+        z-index: 1;
+        transform: scale(0.8);
+        display: none;
+        // outline:1px solid blue;
+
+        @include xxl-up() {
+            display: block !important;
+        }
+    }
+    .brick--corner-left {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        z-index: 1;
+        // outline:2px solid yellow;
+        transform: scale(0.8);
+        transform-origin: bottom left;
+        display: none;
+        @include xl-up() {
+            display: block !important;
+        }
+    }
+    .brick--corner-right {
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        z-index: 1;
+        // outline:2px solid yellow;
+        transform: scale(0.8);
+        transform-origin: bottom right;
+        display: none;
+        @include xl-up() {
+            display: block !important;
+        }
+    }
+}
+
+.second--step--box {
+    position: relative;
+    // display:none;
+    margin: 0 auto;
+    z-index: 2;
+
+    @include md-up() {
+        // outline: 1px solid red;
+        width: 93%;
+    }
+    @include lg-up() {
+        width: 80%;
+        // outline: 1px solid yellow;
+    }
+    @include xl-up() {
+        // outline: 1px solid purple;
+    }
+
+    @include xxl-up() {
+        // outline: 1px solid green;
+    }
+    > .background {
+        text-align: center;
+        > .picture {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        // display:none;
+        z-index: 3;
+        width: 80%;
+        @include md-up() {
+            width: 70%;
+            margin: 0 auto;
+        }
+        > .title {
+            text-align: left;
+            font-size: 18px;
+            margin-bottom: 4px;
+            @media screen and (min-width: 340px) {
+                margin-bottom: 20px;
+            }
+            @media screen and (min-width: 380px) {
+                font-size: 5vw;
+            }
+            @media screen and (min-width: 490px) {
+                font-size: 3vw;
+            }
+            @include md-up() {
+                font-size: 25px;
+            }
+        }
+        .info {
+            font-weight: bold;
+            @media screen and (min-width: 340px) {
+                margin-top: 20px;
+            }
+            @media screen and (min-width: 380px) {
+                margin-top: 20px;
+                font-size: 4vw;
+            }
+            @media screen and (min-width: 480px) {
+                margin-top: 20px;
+                font-size: 18px;
+            }
+        }
+    }
+    > .boy {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
+        // transform: translateX(-90%);
+        img {
+            max-width: 100%;
+        }
+        @include md-up() {
+            display: block;
+            width: 120px;
+            left: -20px;
+        }
+        @include lg-up() {
+            transform: translateX(-100%);
+            width: 140px;
+            left: 1%;
+        }
+        @include xl-up() {
+            width: 160px;
+            left: 3%;
+        }
+        @include xxl-up() {
+            width: 210px;
+            left: 5%;
+        }
+    }
+    > .girl {
+        display: none;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 3;
+        // transform: translateX(90%);
+        img {
+            max-width: 100%;
+        }
+        @include md-up() {
+            display: block;
+            width: 100px;
+            right: -10px;
+        }
+        @include lg-up() {
+            transform: translateX(100%);
+            width: 120px;
+            right: 1%;
+        }
+        @include xl-up() {
+            width: 140px;
+            right: 3%;
+        }
+        @include xxl-up() {
+            width: 180px;
+            right: 5%;
+        }
+    }
+}
+
+.first--step--box {
+    position: relative;
+    z-index: 2;
+    > .flake--left {
+        position: absolute;
+        left: -54px;
+        top: 23%;
+        z-index: 10;
+        // transform: scaleX(-1);
+        // transform-origin: bottom left;
+        display: none;
+        // transform: translatey(0px) scaleX(-1);
+        // animation: roundFlake 26s ease-in-out infinite;
+
+        @keyframes roundFlake {
+            from {
+                transform: rotate(0deg);
+            }
+            5% {
+                transform: rotate(360deg);
+            }
+            10% {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(0deg);
+            }
+        }
+        @include lg-up() {
+            display: block !important;
+        }
+    }
+    > .flake--right {
+        position: absolute;
+        right: -10px;
+        bottom: 12%;
+        z-index: 10;
+        // transform: scale(0.8);
+        // transform-origin: bottom left;
+        display: none;
+        animation: float2 6s ease-in-out infinite;
+        transform: rotate(0px);
+        @keyframes float2 {
+            0% {
+                transform: rotate(0px);
+            }
+            10% {
+                transform: rotate(-10deg);
+            }
+            20% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(0px);
+            }
+        }
+        @include md-up() {
+            right: 50px;
+            top: 30%;
+            display: block !important;
+            transform: scale(0.8);
+        }
+        @include lg-up() {
+            right: -10px;
+            bottom: 12%;
+            top: auto;
+            transform: scale(1);
+        }
+    }
+    @include md-up() {
+        // outline:1px solid red;
+    }
+    @include lg-up() {
+        // outline:1px solid yellow;
+    }
+    @include xl-up() {
+        // outline:1px solid green;
+        width: 84%;
+        margin: 0 auto;
+    }
+    @include xxl-up() {
+        width: 80%;
+        margin: 0 auto;
+    }
+    > .background {
+        text-align: center;
+        > .picture {
+            position: relative;
+            z-index: 2;
+            // &.-back {
+            //     position: absolute;
+            //     z-index: 1;
+            //     top: 70px;
+            //     left: -2px;
+            //     width: calc(100% + 4px);
+            //     height: 80%;
+            //     transform: rotate(2deg);
+            //     object-fit: cover;
+            //     @include md-up() {
+            //         height: auto;
+            //         left: -12px;
+            //         transform: rotate(0);
+            //         width: calc(100% + 30px);
+            //     }
+            //     @include lg-up() {
+            //         top: 60px;
+            //         right: 0;
+            //         left: 6.5%;
+            //         width: 95%;
+            //     }
+            //     @include xl-up() {
+            //         top: 80px;
+            //     }
+            // }
+        }
+    }
+    > .inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        // display:none;
+        z-index: 3;
+        width: 80%;
+        padding: 30px 0 0 0;
+
+        @include lg-up() {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            padding: 10px 0 0 0;
+        }
+        > .section {
+            @include lg-up() {
+                width: 47%;
+            }
+        }
+        .reward {
+            text-align: left;
+            font-size: 18px;
+            @media screen and (min-width: 380px) {
+                font-size: 5vw;
+            }
+            @media screen and (min-width: 490px) {
+                font-size: 3.2vw;
+            }
+            @media screen and (min-width: 600px) {
+                font-size: 22px;
+            }
+            @include md-up() {
+                font-size: 25px;
+            }
+        }
+        .info {
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+            @media screen and (min-width: 380px) {
+                margin-top: 20px;
+                font-size: 4vw;
+            }
+            @media screen and (min-width: 490px) {
+                font-size: 15px;
+                margin-top: 5px;
+            }
+            @media screen and (min-width: 600px) {
+                font-size: 15px;
+                margin-top: 5px;
+            }
+            @include md-up() {
+                margin-top: 20px;
+                font-size: 19px;
+            }
+            @include lg-up() {
+                margin-top: 0;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.step--item {
+    display: flex;
+    margin-bottom: 13px;
+    @media screen and (min-width: 600px) {
+        margin-bottom: 11px;
+    }
+    @include md-up() {
+        margin-bottom: 25px;
+    }
+    @include lg-up() {
+        margin-bottom: 15px;
+    }
+    * {
+        text-align: left;
+    }
+    .protocol {
+        display: none;
+        @media screen and (min-width: 480px) {
+            display: inline;
+        }
+    }
+    > .arrow {
+        width: 20px;
+        margin-right: 10px;
+        img {
+            width: 20px;
+        }
+    }
+    > .content {
+        width: calc(100% - 30px);
+        .text {
+            font-size: 15px;
+            font-weight: bold;
+            display: block;
+            @media screen and (min-width: 380px) {
+                font-size: 4vw;
+            }
+            @media screen and (min-width: 490px) {
+                font-size: 3vw;
+            }
+            @media screen and (min-width: 600px) {
+                font-size: 15px;
+            }
+
+            @include md-up() {
+                font-size: 20px;
+            }
+            @include lg-up() {
+                font-size: 17px;
+            }
+        }
+        > h5 {
+            margin-top: 3px;
+            font-size: 18px;
+            @media screen and (min-width: 380px) {
+                font-size: 5vw;
+            }
+            @media screen and (min-width: 490px) {
+                font-size: 3.2vw;
+            }
+            @media screen and (min-width: 600px) {
+                font-size: 22px;
+            }
+
+            @include md-up() {
+                font-size: 26px;
+            }
+            @include lg-up() {
+                font-size: 23px;
+            }
+        }
+    }
+}

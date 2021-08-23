@@ -1,0 +1,81 @@
+@import "../../../common/colors";
+@import "../../../common/variables";
+@import "../../../common/grid";
+
+
+.sidebar--main {
+}
+.sidebar--main--link {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-left: 5%;
+    padding: 10px 14px;
+    // border-top: 1px solid $color-border;
+    font-size: 14px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+
+    &.-active {
+        background: $color-background-light;
+        font-weight: bold;
+    }
+    &:hover {
+        background: $color-background-light;
+    }
+    .icon {
+        font-size: 22px;
+        margin-right: 20px;
+    }
+    .icon-wrap {
+        width: 30px;
+        margin-right: 10px;
+    }
+    > .separator {
+        text-align: center;
+        margin: 0 15px 0 15px;
+    }
+    > .label {
+        font-weight: 700;
+    }
+    > .avatar {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+        background: center center;
+        background-size: cover;
+        @include xxl-up(){
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.sidebar--main--submenu {
+    display: none;
+    &.-open {
+        display: block;
+    }
+}
+.sidebar--main--sublink {
+    padding: 10px 14px;
+    width: 90%;
+    margin-left: 10%;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    display: block;
+    cursor: pointer;
+    font-size: 14px;
+    .icon {
+        font-size: 17px;
+        margin-right: 10px;
+    }
+    &:hover {
+        background: $color-background-light;
+    }
+    &.-active {
+        background: $color-background-light;
+        font-weight: bold;
+    }
+}

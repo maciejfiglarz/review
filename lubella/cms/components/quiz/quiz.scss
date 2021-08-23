@@ -1,0 +1,28 @@
+@import "./../../common/index.scss";
+
+.quiz--component {
+}
+
+.quiz--item {
+    margin-bottom: 20px;
+    background: $background-content-hover;
+    padding: 8px;
+    border-radius: $border-radius-small;
+
+    .title {
+        font-weight: 600;
+        font-size: 2rem;
+        margin-right: 10px;
+        &.-small {
+            font-size: 1.3rem;
+        }
+    }
+    .wrap {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.quiz--field {
+    margin: 1.5rem 0;
+}

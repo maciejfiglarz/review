@@ -1,0 +1,77 @@
+.recipe--tool {
+    display: flex;
+    cursor: pointer;
+    @screen xl {
+        margin-right: 4.4rem;
+    }
+    &:hover {
+        > .icon {
+            transform: scale(1.1) translateX(-5%);
+        }
+    }
+
+    > .content {
+        position: relative;
+
+        > .label {
+            font-weight: 900;
+            font-size: 14px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        > .counter {
+            @apply text-light;
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        > .new {
+            transform: translateY(-50%);
+            position: absolute;
+            top: -8px;
+            left: 11px;
+            font-size: 9px;
+            @apply text-red;
+            text-transform: uppercase;
+            @screen lg {
+                top: -6px;
+            }
+        }
+    }
+
+    > .icon {
+        width: 25px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+
+        &.-like {
+            width: 32px;
+        }
+    }
+}
+
+.-scrolled .recipe--tool {
+    align-items: center;
+    margin-right: 3rem;
+    font-size: 14px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    > .content {
+        padding-top: 3px;
+
+        > .counter {
+            display: none;
+        }
+
+        > .new {
+            transform: translateY(-50%);
+            position: absolute;
+            top: -5px;
+        }
+    }
+}

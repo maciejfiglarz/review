@@ -1,0 +1,16 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 575 474" width="575" height="474">
+	<title>768</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #d70105 } 
+		.shp1 { fill: #ffffff;stroke: #000000;stroke-width: 5 } 
+	</style>
+	<g id="768">
+		<g id="etapy">
+			<g id="etap 2">
+				<path id="Rectangle 4 copy 3" class="shp0" d="M11.17 40L563.18 26.22C568.71 26.31 573.11 30.33 573.01 35.21L525.62 448.31C525.52 453.19 520.97 457.08 515.45 457L48.44 472.61C42.92 472.53 38.52 468.51 38.61 463.63L1 48.69C1.1 43.81 5.65 39.92 11.17 40Z" />
+				<path id="Rectangle 4 copy 2" class="shp1" d="M37.17 19L535.18 1.22C540.71 1.31 545.11 5.33 545.01 10.21L513.62 433.31C513.52 438.19 508.97 442.08 503.45 442L61.44 460.61C55.92 460.53 51.52 456.51 51.61 451.63L27 27.69C27.1 22.81 31.65 18.92 37.17 19Z" />
+			</g>
+		</g>
+	</g>
+</svg>

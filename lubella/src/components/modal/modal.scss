@@ -1,0 +1,167 @@
+@import "./../../common/colors.scss";
+@import "./../../common/variables.scss";
+@import "./../../common/grid.scss";
+@import "./../../common/mixins.scss";
+
+// body._modal {
+//     .modal--component {
+//         z-index: 300;
+//     }
+// }
+
+body._modal-loaded {
+    .modal--component {
+        transform: scale(0.9);
+        transition: transform 0.18s, opacity 0.18s, visibility 0s 0.18s; // delay visibility
+        &.-show {
+            // z-index:-1000;
+            visibility: visible;
+            opacity: 1;
+            transform: scale(1);
+            transition-delay: 0s;
+            transform: none;
+        }
+    }
+}
+
+.modal--component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    overflow: auto;
+    width: 100%;
+    min-height: 100%;
+    z-index: 2001;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    // opacity: 0;
+    // transform: rotate3d(1, .5, .5, 180deg) scale(0.1);
+    // transition: all ease-in .4s;
+    visibility: hidden;
+    opacity: 0;
+    // transform: scale(0.9);
+    // transition: transform 0.18s, opacity 0.18s, visibility 0s 0.18s; // delay visibility
+    &.-show {
+        // z-index:-1000;
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        transition-delay: 0s;
+        transform: none;
+    }
+}
+
+.modal--background {
+    position: fixed;
+    z-index: 2002;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal--body--scroll {
+    overflow-y: scroll;
+    @include scrollSmallStyles();
+    max-height: 70vh;
+    padding: 0 20px 0 1px;
+    width: calc(100% + 10px);
+    &.-mobile {
+        @media screen and (min-height: 1005px) {
+            overflow-y: hidden;
+            width: 100%;
+            padding: 0;
+        }
+    }
+}
+
+.modal--content {
+    background: $white;
+    margin: 2rem 0;
+    padding: 5px;
+    width: 95%;
+    position: relative;
+    z-index: 2003;
+    max-width: 670px;
+    // max-height: 85vh;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px;
+    border-radius: $border-radius-small;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &.size-s {
+        width: 520px;
+    }
+
+    &.size-m {
+        width: 600px;
+    }
+}
+.modal--loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal--body {
+    position: relative;
+    background: $blue-dark;
+    padding: 60px 30px 20px 30px;
+    border-radius: $border-radius-small;
+    color: $white;
+
+    .title {
+        color: $yellow;
+        margin-bottom: 40px;
+    }
+    .info {
+        margin-bottom: 40px;
+
+        &.-mb25 {
+            margin-bottom: 25px;
+        }
+        .yellow {
+            color: $yellow;
+        }
+    }
+    .wrap {
+        width: 98%;
+        margin: 0 auto;
+        max-width: 450px;
+        @include md-up() {
+            width: 90%;
+        }
+        .button {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.modal--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px;
+
+    // @screen md {
+    //     font-size: 1.6rem;
+    // }
+}

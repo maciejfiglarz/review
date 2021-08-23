@@ -1,0 +1,7 @@
+@use "./../../common/colors.scss" as *;
+
+.footer--component {
+    height: 90px;
+    width: 100%;
+    background: $footer;
+}

@@ -1,0 +1,211 @@
+@import "./grid.scss";
+@mixin textEffect() {
+    text-shadow: 0px 0px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+        4px 4px 0 rgb(0, 0, 0), 5px 5px 0 rgb(0, 0, 0), 6px 6px 0 rgb(0, 0, 0), 7px 7px 6px rgba(0, 0, 0, 1),
+        7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+        
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: $font-marvin;
+    text-align: center;
+    text-transform: uppercase;
+    color: $yellow;
+    @include textEffect;
+    font-size: 28px;
+    line-height: 1.7;
+    @include sm-up() {
+        font-size: 35px;
+    }
+
+    @include md-up() {
+        font-size: 45px;
+        line-height: 1.5;
+    }
+}
+h2 {
+    font-family: $font-marvin;
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $yellow;
+    @include textEffect;
+    line-height: 1.2;
+}
+h3 {
+    font-family: $font-marvin;
+    font-size: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    @include textEffect;
+    line-height: 1.5;
+    color: $yellow;
+    @include sm-up() {
+        font-size: 25px;
+    }
+}
+
+h4 {
+    font-family: $font-teko;
+    font-size: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-size: 28px;
+
+    @include md-up() {
+        // margin-bottom: 100px;
+        font-size: 34px;
+    }
+}
+
+h5 {
+    font-family: $font-teko;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    @include sm-up {
+        font-size: 24px;
+    }
+}
+
+h6 {
+    font-family: $font-teko;
+    font-size: 16px;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+.line {
+    display: block;
+
+}
+.line-md {
+    @include md-up(){
+        display:block;
+    }
+}
+.line-sm {
+    // display: block;
+    @include sm-up() {
+        display: inline-block;
+    }
+}
+.line-lg {
+    display: block;
+    @include lg-up() {
+        display: inline-block;
+    }
+}
+.line-xl {
+    // display: block;
+    @include xl-up() {
+        display: inline-block;
+    }
+}
+
+.blue {
+    color: $blue-dark;
+}
+.red {
+    color: $red;
+}
+.blue-middle {
+    color: $blue-middle;
+}
+
+// @mixin textEffect() {
+//     text-shadow: 0px 0px 0 rgb(0, 0, 0), 1px 1px 0 rgb(0, 0, 0), 2px 2px 0 rgb(0, 0, 0), 3px 3px 0 rgb(0, 0, 0),
+//         4px 4px 0 rgb(0, 0, 0), 5px 5px 0 rgb(0, 0, 0), 6px 6px 0 rgb(0, 0, 0), 7px 7px 6px rgba(0, 0, 0, 1),
+//         7px 7px 1px rgba(0, 0, 0, 0.5), 0px 0px 6px rgba(0, 0, 0, 0.2);
+// }
+
+.main--title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 50px;
+    &.-task {
+        margin-bottom: 25px;
+    }
+    &.-section {
+        margin-top: 40px;
+    }
+    &.-bright {
+        > .text::before, .text::after {
+            background: $white;
+        }
+
+    }
+    &.-bright-text {
+        > .text {
+            color:white;
+        }
+    }
+    
+    @include md-up() {
+        margin-bottom: 100px;
+    }
+    .white {
+        color: $white;
+    }
+    .yellow {
+        color: $yellow;
+    }
+    > .text {
+        display: inline-block;
+        position: relative;
+        &.-break-md-down {
+            display: flex;
+            flex-direction: column;
+            @include lg-up(){
+                display: inline-block;
+            }
+        }
+        &.-break-xl-down{
+            display: flex;
+            flex-direction: column;
+            @include xl-up(){
+                display: inline-block;
+            }
+        }
+        &:before {
+            content: "";
+            background: $black;
+            position: absolute;
+            width: 600%;
+            height: 4px;
+            top: 50%;
+            left: -10px;
+            transform: translateY(50%) translateX(-100%);
+            // @include lg-up() {
+            //     left: -2%;
+            // }
+        }
+        &:after {
+            content: "";
+            background: $black;
+            position: absolute;
+            width: 600%;
+            height: 4px;
+            top: 50%;
+            right: -14px;
+            transform: translateY(50%) translateX(100%);
+            // @include lg-up() {
+            //     right: -2%;
+            // }
+        }
+    }
+}

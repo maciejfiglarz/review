@@ -1,0 +1,34 @@
+@import "./../../common/index.scss";
+
+@import "./../../modules/header/header.scss";
+
+@import "./../../components/modal/modal.scss";
+
+.index--bottom {
+    background: $blue-dark;
+    padding: 60px 0;
+    overflow: hidden;
+    @include sm-up() {
+        padding: 60px 0;
+    }
+    > .content {
+        max-width: 1170px;
+        @include md-up() {
+            width: 70%;
+        }
+        @include xxl-up() {
+            width: 90%;
+        }
+    }
+}
+
+#accept-cookies-checkbox {
+    background: $blue-dark;
+    border-radius: 4px;
+}
+
+.cookies {
+    &.-hide {
+        display:none !important;
+    }
+}

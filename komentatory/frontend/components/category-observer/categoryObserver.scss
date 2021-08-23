@@ -1,0 +1,27 @@
+@import "../../common/colors.scss";
+@import "../../common/variables";
+
+
+.category--observer {
+    background: $color-primary;
+    font-weight: 700;
+    transition: all 0.5s;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 11px;
+    text-align: center;
+    border-radius: $border-radius;
+    border: 2px solid $color-primary;
+    &:hover {
+        background: $color-primary-hover;
+    }
+
+    &.-observed {
+        color: $color-white;
+        background-color: transparent;
+        border: 2px solid $color-white;
+        &:hover {
+            background: $color-primary-hover;
+        }
+    }
+}

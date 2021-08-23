@@ -1,0 +1,30 @@
+@import "./../../common/colors";
+@import "./../../common/variables";
+
+.social--component {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    > .link {
+        padding: 10px;
+        display:block;
+        margin:0 5px;
+        border-radius: 50%;
+        &.-fb {
+            padding: 10px 14px;
+        }
+        i {
+            font-size: 18px;
+        }
+        &:hover {
+            background-color: $color-background-light;
+            border-radius: 50%;
+        }
+        // @include lg-up(){
+
+        // }
+    }
+}

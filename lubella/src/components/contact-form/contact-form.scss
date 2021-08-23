@@ -1,0 +1,145 @@
+@use "./../../common/colors.scss" as *;
+@use "./../../common/variables.scss" as *;
+@use "./../../common/grid.scss" as *;
+@use "./../../common/fonts.scss" as *;
+@import "./../../common/typography.scss";
+
+.contact--component {
+    .link {
+        color: white;
+
+        // text-decoration: underline;
+        transition: all 0.5s;
+        opacity: 0.8;
+        font-weight: bold;
+        &:hover {
+            transition: all 0.5s;
+            opacity: 1;
+            color: white;
+        }
+    }
+}
+
+.contact--form {
+    width: 100%;
+    margin: 0 auto;
+    z-index:1;
+    @include lg-up() {
+        max-width: 100%;
+    }
+}
+
+.contact--section--wrap {
+    position: relative;
+    z-index: 10;
+    @include lg-up() {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contact--section {
+    position:relative;
+    &.-left {
+        z-index: 3;
+    }
+    &.-right {
+        z-index: 2;
+    }
+    @include lg-up() {
+        width: 48%;
+    }
+}
+
+.contact--title {
+    color: $white;
+    margin-bottom: 20px;
+}
+
+.contact--button {
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    &.-sending {
+        opacity: 0.3;
+    }
+
+    @include md-up() {
+        max-width: 400px;
+    }
+
+    @include lg-up() {
+        margin-right: 0;
+        max-width: 450px;
+        transform: translateX(0);
+    }
+}
+
+.contact--selector {
+    position: relative;
+    z-index: 10;
+}
+
+.contact--selector--input {
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid transparent;
+    // border-radius: $border-radius-small;
+    resize: vertical;
+    font-size: 15px;
+    border: 1px solid $border;
+    display: block;
+    background: white;
+    height: 43px;
+    // &:focus,
+    // &:hover {
+    //    ~ .contact--selector--list {
+    //         display: block;
+    //         outline: 1px solid red;
+    //     }
+    // }
+
+    &.-error {
+        outline: 1px solid $error;
+    }
+}
+
+.contact--selector--list {
+    display: none;
+    &.-open {
+        display: block;
+    }
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    max-height: 300px;
+    // overflow-y: scroll;
+    // border: 1px solid $border;
+    // border-bottom-right-radius: $border-radius-small;
+    // border-bottom-left-radius: $border-radius-small;
+    // @include scrolStyles();
+}
+
+.contact--selector--item {
+    &.-unchecked {
+        height: 100%;
+    }
+    padding: 11px;
+    // border-bottom: 1px solid $border;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    background: $white;
+    cursor: pointer;
+    &:hover {
+        background: #e6e5de;
+    }
+    &:last-child {
+        border: 0;
+    } // border-bottom-right-radius: $border-radius-small;
+    // border-bottom-left-radius: $border-radius-small;
+}

@@ -1,0 +1,545 @@
+@use "./../../common/colors.scss" as *;
+@use "./../../common/variables.scss" as *;
+@use "./../../common/grid.scss" as *;
+@use "./../../common/mixins.scss" as *;
+
+.hero--component {
+    // @include gradientMain();
+    // margin-top: -80px;
+    //   padding-top: 80px;
+
+    // &:after {
+    //     content: "";
+    //     width: 100%;
+    //     position: absolute;
+    //     height: 90%;
+    // }
+}
+
+.hero--gradient {
+    @include gradientMainHero();
+}
+
+.hero--first {
+    text-align: center;
+    padding-top: 90px;
+
+    > .brick--left {
+        position: absolute;
+        left: 0;
+        top: 65%;
+        height: 40px;
+        display: none;
+
+        @include md-up() {
+            display: block;
+        }
+
+        @include lg-up() {
+            top: 35%;
+            height: 60px;
+            left: 0;
+        }
+        @include xl-up() {
+            top: 40%;
+            height: 80px;
+            left: 8%;
+        }
+        @include xxl-up() {
+            top: 50%;
+            left: -80px;
+            height: auto;
+        }
+    }
+    > .brick--right {
+        position: absolute;
+        right: 0;
+        top: 55%;
+        // height: 30px;
+        height: 40px;
+        display: none;
+        @include md-up() {
+            display: block;
+        }
+        @include lg-up() {
+            top: 35%;
+            height: 60px;
+        }
+        @include xl-up() {
+            height: 80px;
+            right: 10%;
+        }
+
+        // @include xxl-up() {
+        //     top: 55%;
+        //     right: -140px;
+        //     height: auto;
+        // }
+        @media screen and (min-width: 1618px) {
+            top: 55%;
+            right: -140px;
+            height: auto;
+        }
+    }
+
+    > .logo {
+        img {
+            width: 125px;
+
+            @include xl-up() {
+                width: 150px;
+            }
+            @include xxl-up() {
+                width: 170px;
+            }
+        }
+    }
+    > .quiz {
+        img {
+            width: 320px;
+            @include sm-up {
+                width: 480px;
+            }
+            @include md-up {
+                width: 610px;
+            }
+            @include xl-up() {
+                width: 650px;
+            }
+            @include xxl-up() {
+                width: 850px;
+            }
+        }
+    }
+    > .title {
+        margin: 10px 0 20px 0;
+        @include sm-up() {
+            margin: 15px 0 25px 0;
+        }
+        img {
+            width: 270px;
+            @include sm-up() {
+                width: 380px;
+            }
+            @include md-up() {
+                width: 500px;
+            }
+        }
+    }
+    > .button {
+        margin-bottom: 30px;
+    }
+    > .description {
+        max-width: 390px;
+        margin: 0 auto 70px auto;
+        @media screen and (min-width: 380px) {
+            margin: 0 auto 40px auto;
+        }
+        @include xl-up() {
+            max-width: 570px;
+            .line {
+                display: inline;
+            }
+        }
+        > .blue {
+            color: $blue-middle;
+        }
+    }
+}
+
+.hero--background {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include sm-up() {
+        height: 200px;
+    }
+
+    @include md-up() {
+        height: 260px;
+    }
+
+    &:after {
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../images/hero-bg-mobile.jpg");
+
+        @include md-up() {
+            background-size: contain;
+            background-image: url("../../images/hero-bg.jpg");
+            height: 530px;
+        }
+
+        @include xl-up() {
+            background-size: contain;
+            background-image: url("../../images/hero-bg-desktop.png");
+            height: 530px;
+        }
+    }
+    > .content {
+        display: flex;
+        justify-content: space-between;
+        > .picture {
+            img {
+                max-width: 100%;
+            }
+            &.-kids {
+                width: 130px;
+                margin-top: -50px;
+                @include sm-up() {
+                    margin-top: -90px;
+                    margin-left: -20px;
+                    width: 160px;
+                }
+                @include md-up() {
+                    width: 208px;
+                    margin-top: -120px;
+                    margin-left: 0;
+                }
+                @include lg-up() {
+                    width: 263px;
+                    margin-top: -197px;
+                }
+                @include xl-up() {
+                    width: 285px;
+                    margin-top: -237px;
+                }
+                @include xxl-up() {
+                    width: 370px;
+                    margin-top: -339px;
+                }
+            }
+            &.-pack {
+                width: 100px;
+                margin-top: -60px;
+                @include sm-up() {
+                    margin-right: -15px;
+                    width: 122px;
+                    margin-top: -106px;
+                }
+                @include md-up() {
+                    width: 165px;
+                    margin-top: -138px;
+                    margin-right: 0;
+                }
+                @include lg-up() {
+                    width: 220px;
+                    margin-top: -246px;
+                }
+                @include xl-up() {
+                    width: 246px;
+                    margin-top: -289px;
+                }
+                @include xxl-up() {
+                    width: 286px;
+                    margin-top: -380px;
+                }
+            }
+        }
+    }
+}
+
+.hero--player {
+    width: 100%;
+    position: relative;
+    border-radius: $border-radius-small;
+    background: $white;
+    padding: 5px;
+    margin-top: -100px;
+    margin-bottom: 40px;
+    @include shadow();
+    @include md-up() {
+        margin-top: -130px;
+    }
+    @include xl-up() {
+        margin-top: -155px;
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @include xxl-up() {
+        margin-top: -197px;
+    }
+    > .inner {
+        border-radius: $border-radius-small;
+        background: $blue-middle;
+        height: 215px;
+        position: relative;
+
+        @include sm-up() {
+            height: 300px;
+        }
+        @include lg-up() {
+            height: 440px;
+        }
+
+        .foreground {
+            background: $blue-middle;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $border-radius-small;
+            overflow: hidden;
+            cursor: pointer;
+            .play {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) scale(0.9);
+                max-width: 140px;
+                @include md-up() {
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+            .brick1 {
+                position: absolute;
+                left: 0;
+                top: 10%;
+                transform: translateX(-50%) scale(0.7);
+                @include md-up() {
+                    transform: translateX(-50%) scale(1);
+                }
+            }
+            .brick2 {
+                position: absolute;
+                left: 10%;
+                top: 65%;
+                transform: scale(0.7);
+                @include sm-up() {
+                    position: absolute;
+                    left: 15%;
+                    top: 65%;
+                    transform: scale(0.7);
+                }
+                @include md-up() {
+                    transform: scale(1);
+                }
+            }
+            .brick3 {
+                position: absolute;
+                right: 10%;
+                top: 20%;
+                transform: scale(0.7);
+                @include md-up() {
+                    transform: scale(1);
+                }
+            }
+            .brick4 {
+                position: absolute;
+                right: 30%;
+                top: calc(100% + 8px);
+                transform: translateY(-100%) scale(0.7);
+                @include md-up() {
+                    transform: translateY(-100%) scale(1);
+                }
+            }
+        }
+
+        
+        video {
+            width: 100%;
+            height: 215px;
+            border-radius: $border-radius-small;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            @include sm-up() {
+                height: 300px;
+            }
+            @include lg-up() {
+                height: 440px;
+            }
+        }
+    }
+    > .arrow {
+        display: none;
+        position: absolute;
+        right: -170px;
+        bottom: -70px;
+        width: 125px;
+        animation-name: moveArrow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @media only screen and (min-width: 1286px) {
+            display: block;
+        }
+
+        @keyframes moveArrow {
+            from {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(-20px, -10px);
+            }
+
+            to {
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+.hero--second {
+    > .description {
+        &.-first {
+            margin-bottom: 25px;
+        }
+        &.-second {
+            margin-bottom: 30px;
+        }
+        &.-third {
+            margin-bottom: 3px;
+        }
+    }
+    > .title {
+        margin-bottom: 25px;
+    }
+}
+
+// .hero--packs {
+//     margin: 40px 0;
+//     @include sm-up() {
+//         margin: 80px 0;
+//     }
+//     @include lg-up {
+//         margin: 195px 0;
+//     }
+// }
+
+.hero--packs {
+    margin: 40px 0;
+    text-align: center;
+    position: relative;
+    // overflow: hidden;
+
+    &.-packs-effect {
+        .picture {
+            img {
+                transform: scale(1);
+                animation: zoomBackground 2s ease;
+                @keyframes zoomBackground {
+                    from {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.05);
+                        transform-origin: center center;
+                    }
+
+                    to {
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        // .pack-left {
+        //     animation: packEffect1 1s ease;
+        //     transform: translateY(-39%) translateX(-140%) rotate(-2deg) scale(1);
+        //     @keyframes packEffect1 {
+        //         from {
+        //             transform: translateY(-39%) translateX(-140%) rotate(-2deg) scale(1);
+        //         }
+
+        //         50% {
+        //             transform: translateY(-39%) translateX(-140%) rotate(-2deg) scale(1.04);
+        //         }
+
+        //         to {
+        //             transform: translateY(-39%) translateX(-140%) rotate(-2deg) scale(1);
+        //         }
+        //     }
+        // }
+        // .pack-middle {
+        //     animation: packEffect2 1s ease;
+        //     // animation-delay: 1;
+        //     transform: translateY(-50%) translateX(-50%) scale(1);
+        //     @keyframes packEffect2 {
+        //         from {
+        //             transform: translateY(-50%) translateX(-50%) scale(1);
+        //         }
+
+        //         50% {
+        //             transform: translateY(-50%) translateX(-50%) scale(1.04);
+        //         }
+
+        //         to {
+        //             transform: translateY(-50%) translateX(-50%) scale(1);
+        //         }
+        //     }
+        // }
+        // .pack-right {
+        //     animation: packEffect3 1s ease;
+        //     // animation-delay: 1.5;
+        //     transform: translateY(-33%) translateX(145%) rotate(5deg) scale(1);
+        //     @keyframes packEffect3 {
+        //         from {
+        //             transform: translateY(-33%) translateX(145%) rotate(5deg) scale(1);
+        //         }
+
+        //         50% {
+        //             transform: translateY(-33%) translateX(145%) rotate(5deg) scale(1.04);
+        //         }
+
+        //         to {
+        //             transform: translateY(-33%) translateX(145%) rotate(5deg) scale(1);
+        //         }
+        //     }
+        // }
+    }
+
+    .pack-left {
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: 54%;
+        transform: translateY(-39%) translateX(-140%) rotate(-2deg);
+        max-width: 24%;
+        // outline: 1px solid blue;
+    }
+    .pack-right {
+        position: absolute;
+        z-index: 3;
+        right: 50%;
+        top: 54%;
+        transform: translateY(-33%) translateX(145%) rotate(5deg);
+        max-width: 24%;
+        // outline: 1px solid red;
+    }
+
+    .pack-middle {
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        top: 54%;
+        transform: translateY(-50%) translateX(-50%);
+        max-width: 27%;
+        // outline: 1px solid yellow;
+    }
+
+    @include sm-up() {
+        margin: 80px 0;
+    }
+    @include lg-up {
+        margin: 125px 0;
+    }
+    @include xxl-up {
+        margin: 185px 0;
+    }
+}

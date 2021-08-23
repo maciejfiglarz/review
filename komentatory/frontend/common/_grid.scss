@@ -1,0 +1,404 @@
+// @import "./colors.scss";
+@import "./mixins.scss";
+// Small devices (landscape phones, 576px and up)
+@mixin sm-up() {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+// Medium devices (tablets, 768px and up)
+@mixin md-up() {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+// Large devices (desktops, 992px and up)
+@mixin lg-up() {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+// X-Large devices (large desktops, 1200px and up)
+@mixin xl-up() {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin xxl-up() {
+  @media screen and (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin xxxl-up() {
+  @media screen and (min-width: 1580px) {
+    @content;
+  }
+}
+
+// body._sidebar {
+//   .grid--sidebar--left {
+//     transform: translateX(0);
+//   }
+
+
+// }
+
+.grid--sidebar--left {
+  display: none;
+
+  @include lg-up() {
+    display: block;
+    background: $color-background;
+    padding-top: 68px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    width: 22%;
+    height: 100%;
+    min-height: 100%;
+  }
+  @include xxl-up() {
+    width: 270px;
+  }
+  @include xxxl-up() {
+    width: 20%;
+  }
+}
+
+.grid--content--full {
+  width: 100%;
+  margin-top: 20px;
+  padding: 0 10px;
+  // outline:1px solid red;
+}
+
+.grid--content {
+  margin-top: 20px;
+  padding: 0 10px;
+  // outline:1px solid blue;
+  &.-no-flex {
+    display: block;
+    .grid--content--main {
+      // outline:1px solid red;
+    }
+  }
+  @include lg-up() {
+    width: calc(100% - 23%);
+    margin-left: 23%;
+  }
+  @include xxl-up() {
+    width: calc(100% - 290px);
+    margin-left: 290px;
+    display: flex;
+    justify-content: space-between;
+  }
+  @include xxxl-up() {
+    width: calc(75%);
+    margin-left: 23%;
+  }
+
+  &.-sidebar-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    > .grid--content--sidebar {
+      display: block;
+    }
+    @include xxl-up() {
+      flex-direction: row;
+    }
+  }
+  &.-no-flex {
+    display: block !important;
+
+    @include lg-up() {
+      padding: 0;
+      width: calc(100% - 23% - 10px);
+    }
+    @include xxl-up() {
+      width: calc(77% - 10px);
+    }
+  }
+}
+
+.grid--content--inner {
+  display: flex;
+  justify-content: space-between;
+  > .sidebar {
+    display: none;
+
+    outline: 1px solid red;
+    @include xxl-up() {
+      display: block;
+      // background: $color-background;
+      width: calc(31% - 20px);
+    }
+  }
+}
+
+.grid--content--main {
+  width: 100%;
+  // outline:1px solid red;
+  @include xxl-up() {
+    width: calc(70% - 10px);
+  }
+  @include xxxl-up() {
+    width: calc(67% - 10px);
+    // max-width:700px;
+  }
+}
+
+.grid--content--sidebar {
+  display: none;
+  @include xxl-up() {
+    display: block;
+    // background: $color-background;
+    width: calc(30% - 20px);
+  }
+  @include xxxl-up() {
+    width: 23%;
+    position: absolute;
+    top: 68px;
+    right: 10px;
+  }
+}
+
+// .grid--sidebar--left {
+//   display: none;
+
+//   @include lg-up() {
+//     display: block;
+//     background: $color-background;
+//     padding-top: 68px;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 22%;
+//     height: 100%;
+//     min-height: 100%;
+//   }
+//   @include xxl-up() {
+//     width: 270px;
+//   }
+//   @include xxxl-up() {
+//     width: 20%;
+//   }
+// }
+
+// .grid--content--full {
+//   width: 100%;
+//   margin-top: 20px;
+//   padding: 0 10px;
+//   // outline:1px solid red;
+// }
+
+// .grid--content {
+//   margin-top: 20px;
+//   padding: 0 10px;
+//   // outline:1px solid blue;
+//   &.-no-flex {
+//     display: block;
+//     .grid--content--main {
+//       // outline:1px solid red;
+//     }
+//   }
+//   @include lg-up() {
+//     width: calc(100% - 23%);
+//     margin-left: 23%;
+//   }
+//   @include xxl-up() {
+//     width: calc(100% - 290px);
+//     margin-left: 290px;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+//   @include xxxl-up() {
+//     width: calc(75%);
+//     margin-left: 23%;
+//   }
+
+//   &.-sidebar-reverse {
+//     display: flex;
+//     flex-direction: column-reverse;
+//     > .grid--content--sidebar {
+//       display: block;
+//     }
+//     @include xxl-up() {
+//       flex-direction: row;
+//     }
+//   }
+//   &.-no-flex {
+//     display: block !important;
+
+//     @include lg-up() {
+//       padding: 0;
+//       width: calc(100% - 23% - 10px);
+//     }
+//     @include xxl-up() {
+//     width: calc(77% - 10px);
+//     }
+
+//   }
+// }
+
+// .grid--content--inner {
+//   display:flex;
+//   justify-content: space-between;
+//   >.sidebar {
+//     display: none;
+
+//     outline:1px solid red;
+//     @include xxl-up() {
+//       display: block;
+//       // background: $color-background;
+//       width: calc(31% - 20px);
+//     }
+//   }
+// }
+
+// .grid--content--main {
+//   width: 100%;
+//   // outline:1px solid red;
+//   @include xxl-up() {
+//     width: calc(70% - 10px);
+//   }
+//   @include xxxl-up() {
+//     width: calc(67% - 10px);
+//     // max-width:700px;
+//   }
+// }
+
+// .grid--content--sidebar {
+//   display: none;
+//   @include xxl-up() {
+//     display: block;
+//     // background: $color-background;
+//     width: calc(30% - 20px);
+//   }
+//   @include xxxl-up() {
+//     width: 23%;
+//     position:absolute;
+//     top: 68px;
+//     right:10px;
+//   }
+// }
+
+// .grid-container {
+//   width: 100%;
+//   // max-width: 1920px;
+//   height: 100%;
+//   padding: 0 10px 0 10px;
+
+//   @include lg-up() {
+//     padding: 0 5px 0 5px;
+//     display: flex;
+//     justify-content: center;
+//     &.-fill-right {
+//       justify-content: flex-end;
+//     }
+//   }
+// }
+
+// .grid-content {
+//   width: 100%;
+//   padding-top: 40px;
+
+//   @include lg-up() {
+//     width: 54%;
+//     &.-fill {
+//       width: 71%;
+//       margin-right: 5%;
+//     }
+//     > .inner {
+//       max-width: 920px;
+//       margin: 0 auto;
+//     }
+//     > .wrap {
+//       width: 100%;
+//       display: flex;
+//       justify-content: space-between;
+
+//       > .left {
+//         width: 67%;
+//       }
+//       > .right {
+//         width: 30%;
+//       }
+//     }
+//   }
+
+//   @include lg-up() {
+//     width: 56%;
+//   }
+//   @include xxl-up() {
+//     width: 70%;
+//   }
+// }
+
+// .grid-left {
+//   display: none;
+//   @include lg-up() {
+//     // overflow-y: scroll;
+//     // background: $color-background;
+//     // border-right: 1px solid $color-border;
+//     position: fixed;
+//     padding-top: 68px;
+//     top: 0;
+//     left: 0;
+//     width: 20%;
+//     height: 100%;
+//     min-height: 100%;
+//     display: block;
+//   }
+//   @include xxl-up() {
+//     width: 20%;
+//   }
+// }
+// .grid-right {
+//   display: none;
+//   background: $color-background;
+//   border-left: 1px solid $color-border;
+//   @include lg-up() {
+//     overflow-y: scroll;
+//     direction: rtl;
+//     padding-top: 55px;
+//     background: $color-background;
+//     border-right: 1px solid $color-border;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     width: 20%;
+//     height: 100%;
+//     min-height: 100%;
+//     display: block;
+//   }
+//   @include xxl-up() {
+//     width: 20%;
+//   }
+// }
+
+$width-mobile: 600px;
+$width-desktop: 1140px;
+$width-max: 980px;
+$width-max-small: 500px;
+$width-max-post: 755px;
+$width-fluid: 1240px;
+
+@mixin mobile() {
+  @media screen and (max-width: #{$width-mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: #{$width-mobile}) and (max-width: #{$width-desktop}) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: #{$width-desktop}) {
+    @content;
+  }
+}

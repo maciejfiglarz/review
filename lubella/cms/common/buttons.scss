@@ -1,0 +1,86 @@
+.btn--primary {
+    @include buttonReset();
+    white-space: nowrap;
+    background: $primary;
+    color: $white;
+    padding: 6px 16px;
+    font-size: 1.3rem;
+    min-width: 64px;
+    box-sizing: border-box;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    font-weight: 500;
+    line-height: 1.75;
+    border-radius: $border-radius;
+    text-transform: none;
+
+    &.-save {
+        padding: 10px;
+        min-width: auto;
+        // &:after {
+        //     content:"";
+        //     background-image: url("../images/cms_save.svg");
+        //     background-size: 13px 13px;
+        //     height: 13px;
+        //     display: block;
+        //     width:13px;
+        // }
+    }
+}
+
+.btn--upload {
+    @include buttonReset();
+    max-width: 3.5rem;
+    height: 33px;
+    margin-left: 2rem;
+    &::-webkit-file-upload-button {
+        visibility: hidden;
+    }
+    &.-bright {
+        &:before {
+            color: white;
+            &:hover {
+                &:before {
+                    border-color: $white;
+                }
+            }
+        }
+    }
+    &:hover {
+        &:before {
+            border-color: black;
+        }
+    }
+    &:before {
+        // @include boxShadow();
+        content: "";
+        display: inline-block;
+        // background: linear-gradient(top, #f9f9f9, #e3e3e3);
+        // border: 1px solid #999;
+        outline: none;
+        white-space: nowrap;
+        // background: $background-content;
+        -webkit-user-select: none;
+        cursor: pointer;
+        background-image: url("../images/cms_upload.png");
+        background-size: 33px 33px;
+        height: 33px;
+        display: block;
+        width: 33px;
+        background-repeat: no-repeat;
+    }
+    &:active {
+        &::before {
+            background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+        }
+    }
+}
+
+.btn--close {
+    @include buttonReset();
+    padding: 10px;
+    text-transform: uppercase;
+    img {
+        width: 25px;
+    }
+}

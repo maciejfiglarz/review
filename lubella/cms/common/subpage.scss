@@ -1,0 +1,98 @@
+.subpage--intro {
+    background: $background-intro;
+    height: 20rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2%;
+    > .title {
+        color: $white;
+        font-size: 2rem;
+        margin: -6rem 0 0 2rem;
+        display: inline-block;
+    }
+    > .action {
+    }
+}
+
+
+
+.subpage--content {
+    padding: 2rem 2%;
+    margin: -6rem 2% 3rem 2%;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background: $background-content;
+
+    // &.-list {
+    .center-horizontal {
+        display: flex;
+        justify-content: center;
+    }
+    .center-vertical {
+        display: inline-flex;
+        align-items: center;
+    }
+    .thumb {
+        width: 80px;
+        height: 50px;
+        object-fit: cover;
+        margin-right: 10px;
+    }
+    .icons {
+        display: flex;
+        align-items: center;
+        i {
+            font-size: 1.5rem !important;
+        }
+    }
+    // }
+}
+
+.subpage--item--post {
+    margin-bottom: 2rem;
+    @include md-up {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $border;
+        padding-bottom: 2rem;
+    }
+    > .content {
+        @include md-up {
+            width: 45%;
+        }
+        > .thumb {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: inline-block;
+        }
+    }
+    > .info {
+        @include md-up {
+            width: 53%;
+        }
+        > .action {
+            @include md-up {
+                display: flex;
+            }
+            > .field {
+                margin-right: 0.5rem;
+                margin: 1rem 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        > .title {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+        > .description {
+            font-size: 1.2rem;
+            line-height: 1.4;
+        }
+    }
+}

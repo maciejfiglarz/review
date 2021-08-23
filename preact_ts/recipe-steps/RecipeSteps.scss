@@ -1,0 +1,147 @@
+.recipe--steps--modal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    @apply z-bar-cover;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    padding: 2rem;
+
+    &.-show {
+        display: flex;
+    }
+
+    > .content {
+        position: relative;
+        @apply border-primary border-2;
+        width: auto;
+        max-width: 1200px;
+        max-height: 90%;
+
+        > .close {
+            position: absolute;
+            font-size: 15px;
+            right: -2px;
+            top: 0;
+            transform: translateY(-100%);
+            @apply bg-primary text-white;
+            padding: 5px 10px;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            transition: opacity 0.5s ease;
+
+            > .icon {
+                opacity: 0.8;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        > .image {
+            max-width: 100%;
+        }
+    }
+}
+
+.recipe--steps--tools {
+    margin-top: 30px;
+
+    > .title {
+        font-weight: 900;
+        font-size: 22px;
+        margin-bottom: 10px;
+        letter-spacing: -1px;
+        @screen md {
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            font-size: 26px;
+            letter-spacing: 0;
+        }
+    }
+
+    > .description {
+        font-size: 17px;
+        margin-bottom: 24px;
+        @screen md {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.recipe--steps--item {
+    margin: 5px 0 20px 0;
+    position: relative;
+    @screen md {
+        margin: 20px 0;
+    }
+    > .number {
+        font-size: 26px;
+        font-weight: 700;
+        @apply text-primary;
+        @screen md {
+            margin: -5px 0 5px 0;
+        }
+        @screen lg {
+            transform: translateX(-100%);
+            position: absolute;
+            left: -25px;
+            top: 3px;
+        }
+    }
+
+    > .content {
+        font-size: 17px;
+    }
+
+    > .wrap {
+        margin: 20px -16px 0 -16px;
+        display: flex;
+        justify-content: center;
+        @screen sm {
+            margin: 20px -18px 0 -18px;
+        }
+        @screen md {
+            margin: 20px auto 0 auto;
+        }
+
+        > .player {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+
+            > iframe {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            @screen md {
+                height: 500px;
+            }
+        }
+
+        > .image {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            text-align: center;
+
+            > .zoom {
+                border-radius: 50%;
+                @apply bg-primary;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@import "./../../common/index.scss";
+
+.navigationComponent {
+    height: 100%;
+    min-height: 100%;
+}
+body.-navigation-opened {
+    .navigation--component {
+        left: 0;
+        transition: all 0.5s;
+    }
+}
+
+
+.navigation--component {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: -22rem;
+    width: 22rem;
+    height: 100%;
+    min-height: 100%;
+    background: $primary;
+    color: $white;
+    background: $background-light;
+    transition: all 0.5s;
+    @include md-up() {
+        position: fixed;
+        left: 0;
+        width: 22rem;
+    }
+    @include lg-up() {
+        position: fixed;
+        left: 0;
+        width: 28rem;
+        left: 0;
+    }
+}
+.navigation--header {
+    height: 5rem;
+    width: 100%;
+    // background: $background-dark;
+    position: relative;
+    display: block;
+    > .logo {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        background: $background-light;
+        border-radius: 50%;
+        padding: 2rem;
+        img {
+            width: 8rem;
+        }
+    }
+    > .close {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        background: $background-light;
+        padding: 8px 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        @include md-up {
+            display: none;
+        }
+        > .icon {
+            width: 0.9rem;
+        }
+    }
+}
+.navigation--list {
+    padding: 4rem 0 0 0;
+    overflow-y: auto;
+    @include scrolStyles();
+    height: 100%;
+    min-height: 100%;
+
+    .item {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        text-decoration: none;
+        padding-left: 2.6rem;
+        cursor: pointer;
+        margin: 0 0.6rem;
+        border-radius: 3px;
+        transition: all 0.5s;
+        display: block;
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 0.8;
+        &.-active {
+            // background: $background-light-hover;
+            opacity: 1;
+            > .dropicon {
+                transform: rotate(180deg);
+            }
+        }
+        &:hover {
+            background: $background-light-hover;
+            opacity: 1;
+        }
+        > .dropicon {
+            transition: all 0.25s ease-out;
+        }
+    }
+    .subitem {
+        &.-active {
+            background: $background-light-hover;
+        }
+    }
+}
+
+.navigation--list--dropdown {
+    height: 0;
+    opacity: 0;
+    transition: all 0.45s ease-out;
+    overflow: hidden;
+    &.-open {
+        opacity: 1;
+        height: auto;
+        transition: all 0.25s ease-in;
+    }
+    > .item {
+        padding: 1rem 2rem 1rem 3.5rem;
+    }
+}

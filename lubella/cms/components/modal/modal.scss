@@ -1,0 +1,115 @@
+@import "./../../common/colors.scss";
+@import "./../../common/variables.scss";
+@import "./../../common/grid.scss";
+@import "./../../common/mixins.scss";
+
+.modal--component {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    overflow: auto;
+    width: 100%;
+    min-height: 100%;
+    z-index: 2001;
+    // display: flex;
+    // // justify-content: center;
+    // align-items: center;
+    overflow: hidden;
+    // &.-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    // }
+    &.-register {
+    }
+}
+.modal--background {
+    position: fixed;
+    z-index: 2002;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+.modal--content {
+    background: $white;
+    margin: 2rem 0;
+    padding: 5px;
+    width: 95%;
+    position: relative;
+    z-index: 2003;
+    max-width: 600px;
+    max-height: 85vh;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px;
+    border-radius: $border-radius-small;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &.size-s {
+        width: 520px;
+    }
+
+    &.size-m {
+        width: 600px;
+    }
+}
+.modal--loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal--body {
+    position: relative;
+    background: $primary;
+    padding: 60px 30px 20px 30px;
+    border-radius: $border-radius-small;
+    color: $white;
+
+    // .title {
+    //     color: $yellow;
+    //     margin-bottom: 40px;
+    // }
+    // .info {
+    //     margin-bottom: 40px;
+    //     .yellow {
+    //         color: $yellow;
+    //     }
+    // }
+    // .wrap {
+    //     width: 90%;
+    //     margin: 0 auto;
+    //     .button {
+    //         margin-bottom: 20px;
+    //     }
+    // }
+}
+
+.modal--close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px;
+
+    // @screen md {
+    //     font-size: 1.6rem;
+    // }
+}

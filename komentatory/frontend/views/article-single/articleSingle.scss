@@ -1,0 +1,179 @@
+@import "../../common/grid.scss";
+@import "../../common/colors.scss";
+@import "../../common/variables.scss";
+
+.article {
+    &-single {
+        background: $color-background;
+        border-radius: $border-radius;
+        padding: 15px 15px;
+        border: 1px solid $color-border;
+        margin-bottom: 20px;
+
+        .single-label {
+            max-width: 100%;
+        }
+        &__title {
+            font-size: 3.4rem;
+            line-height: 1.3;
+            font-weight: 500;
+            letter-spacing: -1px;
+            @include tablet() {
+                font-size: 3.2rem;
+            }
+            @include mobile() {
+                font-size: 2.2rem;
+            }
+        }
+        &__image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            margin: 15px 0;
+            position: relative;
+            &::after {
+                content: "";
+                width: 20%;
+                height: 4px;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                background: $color-secondary;
+                transition: all 0.5s ease;
+            }
+            @include mobile() {
+                height: 180px;
+            }
+            @include tablet() {
+                height: 300px;
+            }
+        }
+        &__content {
+            * {
+                line-height: 1.7;
+            }
+            blockquote {
+                background: $color-background-light;
+                border-left: 8px solid $color-primary;
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+                color: white;
+                font-size: 11px;
+                font-style: italic;
+                font-weight: 300;
+                line-height: 1.6;
+                margin: 50px auto;
+                padding: 1.2em 30px 1.2em 75px;
+                position: relative;
+                vertical-align: super;
+                width: 100%;
+                z-index: 0;
+                overflow: hidden;
+                i {
+                    font-size: 12px;
+                    margin-top:6px;
+                    display:block;
+                }
+                ul {
+                    padding-left: 0;
+                    list-style-type: none;
+                    li::before {
+                        display: none;
+                    }
+                }
+            }
+            blockquote::before {
+                color: $color-primary;
+                content: "\201C";
+                font-size: 9em;
+                left: 0;
+                position: absolute;
+                top: -35px;
+            }
+            blockquote span {
+                color: $color-primary;
+                display: block;
+                font-size: 1.4em;
+                font-weight: 300;
+                letter-spacing: 1px;
+                margin-top: 0.5em;
+            }
+
+            figure {
+                margin: 0 auto;
+                &.image {
+                    display: inline-block;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    figcaption {
+                        font-size: 10px;
+                        padding: 4px 0;
+                        background: $color-background-light;
+                        margin-top: -6px;
+                        text-align: center;
+                    }
+                }
+            }
+            .media {
+                margin: 0 auto !important;
+                text-align: center;
+                max-width:700px;
+                img {
+                    margin: 0 auto;
+                }
+            }
+            iframe {
+                max-width: 100% !important;
+                // width:100% !important;
+            }
+            img {
+                max-width: 100%;
+            }
+
+            p {
+                font-size: 1.7rem;
+                @include tablet() {
+                    font-size: 1.5rem;
+                }
+                @include mobile() {
+                    font-size: 1.4rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.9rem;
+                font-weight: bold;
+                line-height: 1.3em;
+                @include mobile() {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    line-height: 1.4em;
+                }
+            }
+            strong {
+                letter-spacing: 0.06em;
+            }
+            ul {
+                list-style: none;
+                padding-left: 10px;
+            }
+            li {
+                position: relative;
+            }
+            ul li::before {
+                content: "\2022";
+                color: $color-primary;
+                font-weight: bold;
+                display: inline-block;
+                font-size: 2.5rem;
+                position: absolute;
+                left: -4px;
+                top: 0px;
+                width: 10px;
+                margin-left: -10px;
+            }
+        }
+    }
+}

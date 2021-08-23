@@ -1,0 +1,224 @@
+.recipe--bar--mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @apply bg-white z-bar py-8 px-10 justify-between;
+    display: flex;
+    padding-left: 1.95rem;
+    padding-right: 1.95rem;
+    &.-hide {
+        transform: translateY(-100%);
+    }
+
+    @screen md {
+        display: none;
+    }
+    .btn {
+        font-size: 17px;
+        height: 5rem;
+        &.-action {
+            padding: 0 1.1rem;
+        }
+        &.-save {
+            padding: 0 3.6rem;
+        }
+        > .-share {
+            width: 25px;
+        }
+        > .-thumb {
+            font-size: 22px;
+        }
+    }
+}
+
+.reciper--bar--fake {
+    position: absolute;
+    z-index: 1;
+    height: 45px;
+    width: 1px;
+    display: none;
+    @screen md {
+        display: block;
+    }
+}
+
+.recipe--bar--cover {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @apply z-bar-cover;
+    display: none;
+
+    &.-show {
+        display: block;
+    }
+}
+
+.recipe--bar--save {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: transform 0.7s ease;
+    transform: translateY(100%);
+    @apply bg-white z-bar-frame justify-around;
+    display: flex;
+    padding: 8rem 1rem 1rem 1rem;
+
+    &.-show {
+        transform: translateY(0);
+        transition: transform 0.7s ease;
+    }
+
+    > .title {
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        font-weight: 900;
+    }
+
+    > .item {
+        @apply bg-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 5px;
+        padding: 1.5rem 0;
+        width: 28%;
+
+        @screen sm {
+            padding: 2rem 0;
+        }
+        > .label {
+            @apply text-white;
+        }
+
+        > .icon {
+            width: 27px;
+            margin-bottom: 1rem;
+
+            &.-planer {
+                width: 33px;
+            }
+        }
+    }
+
+    > .close {
+        position: absolute;
+        font-size: 16px;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+.recipe--bar {
+    display: none;
+    justify-content: space-between;
+    width: 100%;
+    position: static;
+    z-index: 2;
+    top: 0;
+    @screen md {
+        display: flex;
+    }
+    @screen lg {
+        margin-top: 18px;
+        margin-bottom: 25px;
+    }
+    &.-scrolled {
+        &.-up {
+            @screen md {
+                top: 0;
+            }
+        }
+
+        position: fixed;
+        left: 0;
+        top: 58px;
+        @apply z-nav-under bg-extraLighter border-b border-border;
+        margin: 0;
+        padding: 15px 0;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        @screen lg {
+            justify-content: space-between;
+            top: 61px;
+        }
+
+        > .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            > .title {
+                @screen lg {
+                    display: inline-block;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    > .inner {
+        width: 100%;
+
+        > .title {
+            display: none;
+            font-weight: 900;
+            font-size: 20px;
+        }
+    }
+}
+
+.recipe--bar--action {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @screen xl {
+        justify-content: flex-start !important;
+    }
+    &.-scrolled {
+        @screen lg {
+            width: auto;
+        }
+    }
+
+    > .more {
+        width: 5px;
+        cursor: pointer;
+        @screen lg {
+            margin-right: 12px;
+        }
+        @screen xl {
+            margin-right: 0;
+            margin-left: 1.8rem;
+        }
+    }
+}
+
+.icon--list {
+    width: 20px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.icon--book {
+    width: 20px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.icon-planner {
+    margin-bottom: 5px;
+}

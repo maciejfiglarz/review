@@ -1,0 +1,140 @@
+.search--bar--component {
+    position: relative;
+    margin: 4px 16px 4px 36px;
+
+    .-compact & {
+        @screen lg {
+            position: absolute;
+            @apply bg-white;
+            top: -53px;
+            right: 9px;
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .-show & {
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    @screen lg {
+        margin-left: 40px;
+        width: 425px;
+    }
+
+    @screen xl {
+        margin-left: 0;
+        width: 514px;
+    }
+
+    @screen xxl {
+        width: 505px;
+        margin-left: 37px;
+    }
+}
+
+.mobile--search--bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @apply bg-white;
+    z-index: 101;
+    display: none;
+
+    &.-show {
+        display: block;
+    }
+
+    @screen lg {
+        position: relative;
+        display: block;
+    }
+}
+
+.small--icon--search {
+    appearance: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+    width: 40px;
+    border: 1px solid;
+    @apply border-light;
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 10px;
+
+    @screen lg {
+        padding: 1.1rem;
+        height: 4.8rem;
+        width: 4.8rem;
+        margin-right: 2rem;
+        display: none;
+    }
+
+    .-compact & {
+        @screen lg {
+            display: block;
+            margin-right: 25px;
+        }
+    }
+}
+
+.icon--search {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -3.2rem;
+    transform: translateY(-50%);
+    margin-bottom: 10px;
+    width: 28px;
+    height: 28px;
+    appearance: none;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+
+    @screen lg {
+        left: auto;
+        right: 2rem;
+    }
+
+    > .-close {
+        font-size: 1.6rem;
+        @apply text-primary;
+    }
+}
+
+.clear--button {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    margin-top: 2px;
+
+    > .-clear {
+        font-size: 1.7rem;
+        color: #d5d6d5;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.search--autocomplete {
+    @apply lg:hidden;
+    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    min-height: 5px;
+
+    > .result {
+        font-size: 1.6rem;
+        font-weight: 700;
+        display: block;
+        padding: 5px 40px;
+    }
+}

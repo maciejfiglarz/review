@@ -1,0 +1,62 @@
+input[type="text"],input[type="email"]
+select,
+textarea {
+    width: 100%;
+    padding: 1.2rem;
+    // border: 1px solid #ccc;
+    border-radius: $border-radius-small;
+    resize: vertical;
+    font-size: 1.5rem;
+    border: 1px solid $border;
+    &:focus {
+        outline: none;
+    }
+}
+
+textarea {
+    height: 250px;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type="submit"] {
+    background-color: $primary;
+    color: white;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    float: right;
+}
+
+.field--wrap--horizontal {
+    display: flex;
+    align-items: center;
+    > .field {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.field {
+    margin-bottom: 2rem;
+    &.-top10 {
+        margin-top: 1rem;
+    }
+    &.-error {
+        border: 1px solid $error;
+    }
+    &.-inline {
+        display: inline;
+    }
+}
+
+.field-save {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+} 

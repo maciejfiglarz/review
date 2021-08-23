@@ -1,0 +1,96 @@
+.comment--form {
+    display: flex;
+    width: 100%;
+
+    @screen lg {
+        margin-top: 4px;
+    }
+
+    > .avatar {
+        margin-top: -2px;
+        margin-right: 0;
+        display: none;
+        @screen md {
+            margin-right: 30px;
+            display: block;
+            margin-top: 0;
+        }
+        @screen lg {
+            margin-top: 17px;
+            margin-right: 0;
+            margin-left: 33px;
+        }
+        @screen xl {
+            margin-left: 59px;
+            margin-right: 16px;
+        }
+        @screen xxl {
+            margin-left: 33px;
+        }
+    }
+
+    > .form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        width: 100%;
+        margin-top: 15px;
+        @screen md {
+            margin-top: 0;
+        }
+        @screen lg {
+            margin-top: 22px;
+            margin-left: 20px;
+        }
+    }
+
+    > .form > .form--input {
+        margin-bottom: 20px;
+        padding-left: 5px;
+
+        @screen md {
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+        @screen lg {
+            margin-bottom: 30px;
+            max-width: 890px;
+            padding: 0 50px 0 20px;
+        }
+        @screen xxl {
+            max-width: 900px;
+        }
+        &.-error {
+            @apply border-error;
+        }
+    }
+
+    > .form > .picture {
+        position: absolute;
+        top: 12px;
+        right: 20px;
+        width: 30px;
+    }
+
+    > .form > .error--message {
+        position: absolute;
+        left: 0;
+        top: 55px;
+        @apply text-error;
+    }
+    > .form > .comment--btn--container {
+        > .btn--primary {
+            height: 5.2rem;
+            padding: 0 2.5rem;
+            @screen md {
+                height: 5.3rem;
+                padding: 0 3.5rem;
+            }
+            @screen lg {
+                height: 5.3rem;
+                padding: 0 3.4rem;
+            }
+        }
+    }
+}

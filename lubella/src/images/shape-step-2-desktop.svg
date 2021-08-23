@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 411" width="830" height="411">
+	<title>1920</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #d70105 } 
+		.shp1 { fill: #ffffff;stroke: #000000;stroke-width: 5 } 
+	</style>
+	<g id="1920">
+		<g id="etapy">
+			<path id="Rectangle 4 copy 3" class="shp0" d="M25.17 50L818.18 43.22C823.71 43.31 828.11 47.33 828.01 52.21L780.62 392.31C780.52 397.19 775.97 401.08 770.45 401L69.44 409.61C63.92 409.53 59.52 405.51 59.61 400.63L15 58.69C15.1 53.81 19.65 49.92 25.17 50Z" />
+			<path id="Rectangle 4 copy 2" class="shp1" d="M11.17 33L794.18 1.22C799.71 1.31 804.11 5.33 804.01 10.21L771.62 356.31C771.52 361.19 766.97 365.08 761.45 365L34.44 397.61C28.92 397.53 24.52 393.51 24.61 388.63L1 41.69C1.1 36.81 5.65 32.92 11.17 33Z" />
+		</g>
+	</g>
+</svg>

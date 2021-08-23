@@ -1,0 +1,63 @@
+.like--component {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    flex: 1;
+    > .like {
+        width: 32px;
+    }
+
+    > .counter {
+        @apply text-light;
+        font-weight: 700;
+        font-size: 13px;
+        margin-left: 10px;
+        @screen md {
+            margin-left: 10px;
+        }
+    }
+
+    > .reply {
+        @apply text-primary;
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: auto;
+        @screen md {
+            margin-left: 35px;
+        }
+    }
+
+    > .-arrow {
+        @apply text-light;
+        padding: 0 8px;
+        font-size: 8px;
+        position: relative;
+    }
+}
+
+.likes--list--modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: #fff;
+    border: 1px solid;
+    @apply border-light;
+
+    &.-show {
+        display: block;
+    }
+
+    &.-hide {
+        display: none;
+    }
+
+    > .item {
+        @apply text-basic;
+        font-weight: 700;
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}

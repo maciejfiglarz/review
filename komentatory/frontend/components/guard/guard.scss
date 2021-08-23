@@ -1,0 +1,23 @@
+body._guard {
+    .guard--component {
+        display: block;
+    }
+}
+.guard--component {
+    display: none;
+    
+    > .action {
+        margin:0 auto;
+        width: 70%;;
+        .btn {
+            text-align: center;
+            display:block;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+
+.guard--static--component {
+
+}

@@ -1,0 +1,107 @@
+html {
+    font-size: 62.5%;
+    font-size: 10px;
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $background-page;
+    font-family: "Poppins";
+    height: 100%;
+    min-height: 100%;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
+    color: $text;
+    // &.-loaded {
+    //     overflow-y: scroll;
+    // }
+}
+
+a {
+    color: $text;
+    text-decoration: none;
+    &:hover {
+        color: $text;
+        text-decoration: none;
+    }
+}
+.score-wrap {
+    display:flex; align-items:center;
+}
+.score {
+    font-weight: bold;
+    margin-left:15px;
+    font-size: 15px;
+}
+.searcher {
+   position: absolute;
+   top:0;
+   right:0;
+   display: flex;
+   input {
+       font-size: 12px;
+       border-top-right-radius: 0 !important;
+       border-bottom-right-radius: 0 !important;
+       padding: 0.7rem !important;
+   }
+   .button {
+    background: #0f2b49;
+    color:white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    padding:0 8px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+   }
+   .close {
+    background: #0f2b49;
+    color:white;
+    font-size: 13px;
+    padding:8px 8px 0 8px;
+    max-height: 25px;;
+    cursor:pointer;
+    font-weight: bold;
+    margin-right: 5px;
+    margin-top:5px;
+    border-radius: $border-radius;;
+   }
+}
+
+.arrow {
+    max-width:10px;
+    margin-left:3px;
+    transform-origin: center;
+    cursor: pointer;
+    &.-down {
+        transform: rotate(180deg);
+    }
+}
+
+.triangle-down {
+
+}
+
+// @include media-breakpoint-md(sm) {
+//     html {
+//         font-size: 50%;
+//         font-size: 8px;
+//     }
+// }
+// @include media-breakpoint-md(lg) {
+//     html {
+//         font-size: 56%;
+//         font-size: 8.96px;
+//     }
+// }
+// @include media-breakpoint-md(xl) {
+//     html {
+//         font-size: 62.5%;
+//         font-size: 10px;
+//     }
+// }

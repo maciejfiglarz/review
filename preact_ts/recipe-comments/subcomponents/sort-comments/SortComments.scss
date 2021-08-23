@@ -1,0 +1,77 @@
+.sort--component {
+    width: 100%;
+    text-align: center;
+    transform: translateY(-49px);
+
+    @screen md {
+        transform: translateY(-70px);
+    }
+
+    > .sort {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        @screen lg {
+            margin-top: 3px;
+        }
+    }
+    > .sort > .label > .info {
+        display: inline-block;
+        margin-left: 21px;
+        @screen lg {
+            margin-left: 63px;
+        }
+    }
+    > .sort > .label {
+        font-size: 14px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        @screen md {
+            display: block;
+        }
+    }
+
+    > .sort > .label > .select {
+        padding: 12px 12px 12px 5px;
+        width: 130px;
+        border: none;
+        font-size: 14px;
+        font-weight: 700;
+        color: #4fd675;
+        background: none;
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+    }
+
+    > .sort::before {
+        font-family: "icomoon" !important;
+        font-size: 0.8rem;
+        content: "\e908";
+        position: absolute;
+        top: 18px;
+        right: 19px;
+        width: 20px;
+        text-align: center;
+        color: #8f9190;
+        background: #fff;
+        pointer-events: none;
+        @screen lg {
+            right: 10px;
+        }
+        @screen xxl {
+            right: 26px;
+            width: 20px;
+        }
+    }
+
+    > .sort select option {
+        padding: 30px;
+    }
+}

@@ -1,0 +1,49 @@
+@import "./../../common/index.scss";
+
+.single--file--uploader {
+    margin-bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    position: relative;
+    border: 1px solid $border;
+    background: $white;
+    > .label {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    > .frame {
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 15rem;
+        &.-image {
+            min-height: 8rem;
+            padding: 0;
+            > .image {
+                max-height: 2rem;
+                margin-right: 0.7rem;
+            }
+        }
+        > .image {
+            max-height: 7rem;
+        }
+    }
+    > .loader {
+        border-radius: 1rem;
+        position: absolute;
+        opacity: 0.9;
+        top: 0;
+        left: 0;
+        // width: calc(100% + 2rem);
+        // height: calc(100% + 2rem);
+        width: 100%;
+        height: 100%;
+    }
+    > .btn--upload {
+        margin-right: 1rem;
+    }
+}

@@ -1,0 +1,27 @@
+html {
+    font-size: 10px;
+    height: 100%;
+    min-height: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+  
+    &.-block-overflow {
+      overflow-y: hidden;
+    }
+  }
+  
+  body {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    min-height: 100%;
+    height: 100%;
+    // background-color: #030303 !important;
+    
+    // background-color: #212121 !important;
+    font-family: "Signika", sans-serif;
+    position: relative;
+    padding-bottom: 190px;
+    // color: $color-text !important;
+    overflow-y: hidden;
+  }

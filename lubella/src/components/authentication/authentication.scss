@@ -1,0 +1,27 @@
+@use "./../../common/fonts.scss" as *;
+@use "./../../common/mixins.scss" as *;
+@use "./../../common/grid.scss" as *;
+@use "./../../common/colors.scss" as *;
+
+.authentication--component {
+    > .action {
+        display: none;
+        @include lg-up() {
+            display: flex;
+        }
+
+        > .btn {
+            @include buttonReset();
+            font-size: 16px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            font-family: $font-teko;
+            font-size: 16px;
+            color: $white;
+            &:hover {
+                transition: color 0.5s;
+                color: $blue-dark;
+            }
+        }
+    }
+}

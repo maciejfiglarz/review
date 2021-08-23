@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 239 240" width="239" height="240">
+	<title>play-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+		.shp1 { fill: none;stroke: #ffffff;stroke-width: 8.28 } 
+	</style>
+	<g id="1920">
+		<g id="VIDEO">
+			<path id="Polygon 1" class="shp0" d="M189.16 119.45L79.73 182.64L79.73 56.27L189.16 119.45Z" />
+			<path id="Ellipse 1" class="shp1" d="M119.5 12C179.98 12 229 61.02 229 121.5C229 181.98 179.98 231 119.5 231C59.02 231 10 181.98 10 121.5C10 61.02 59.02 12 119.5 12Z" />
+		</g>
+	</g>
+</svg>

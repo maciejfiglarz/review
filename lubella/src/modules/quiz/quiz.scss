@@ -1,0 +1,111 @@
+@use "./../../common/colors.scss" as *;
+@use "./../../common/variables.scss" as *;
+@use "./../../common/grid.scss" as *;
+@use "./../../common/fonts.scss" as *;
+@use "./../../common/effects.scss" as *;
+
+.quiz--component {
+    overflow: hidden;
+    margin: 40px auto 20px auto;
+    width: 95%;
+    // position: relative;
+    // z-index: 2;
+
+    @include lg-up() {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 120px;
+    }
+}
+
+.quiz--info {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    @include md-up() {
+        font-size: 24px;
+    }
+}
+.quiz--task--question {
+    margin-bottom: 35px;
+}
+
+.quiz--task--status {
+    margin: 25px 0;
+
+    &.-first {
+        margin-top: 40px;
+        @include md-up() {
+            margin-top: 50px;
+        }
+        @include lg-up() {
+            margin-top: 60px;
+        }
+        @include xl-up() {
+            margin-top: 80px;
+        }
+    }
+}
+
+.quiz--item {
+    margin-bottom: 100px;
+    @include lg-up() {
+        width: 33.33333%;
+        margin-bottom: 0;
+        position: relative;
+        padding: 0 3%;
+        border-right: 4px solid $black;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    > .title {
+        margin-bottom: 35px;
+        color: $black;
+    }
+}
+
+.quiz--tip {
+    border: 5px solid $black;
+    padding: 15px;
+    background: $blue-dark;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    &.-visible {
+        background: $yellow;
+    }
+    > .bold {
+        font-family: $font-teko;
+    }
+}
+.quiz--action {
+    margin-top: 50px;
+    position: relative;
+    padding-bottom:20px;
+    &.-no-margin {
+        margin-top: 0;
+    }
+    &.-finish {
+        margin-bottom: 20px;
+    }
+    > .input--field {
+        margin-bottom: 25px;
+    }
+    > .error {
+        &.-popup {
+            top: 4px;  
+        }
+        color: $red;
+        font-size: 17px;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        left: 0;
+        transform: translateY(-100%);
+    }
+}

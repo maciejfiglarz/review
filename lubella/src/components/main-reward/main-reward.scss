@@ -1,0 +1,267 @@
+@use "./../../common/grid.scss" as *;
+@use "./../../common/colors.scss" as *;
+@use "./../../common/mixins.scss" as *;
+
+.main-reward--component {
+    position:relative;
+    z-index: 2;
+}
+.main--reward--success {
+    max-width: 530px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+
+    @include sm-up() {
+        font-size: 18px;
+    }
+    > .title {
+        margin-bottom: 20px;
+    }
+    > .info {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: bold;
+        margin-bottom: 80px;
+        @include sm-up() {
+            font-size: 18px;
+        }
+        @include md-up() {
+            font-size: 20px;
+        }
+        @include lg-up() {
+            font-size: 22px;
+        }
+        @include xl-up() {
+            font-size: 24px;
+        }
+    }
+}
+.main--reward--content {
+    > .info {
+        max-width: 530px;
+        margin: 0 auto 65px auto;
+        // display: inline-block;
+        &.-red {
+            color: $red;
+        }
+        .first-line {
+            @include lg-up(){
+                display:block;
+            }
+        }
+    }
+    > .form {
+        max-width: 690px;
+        margin: 0 auto;
+        position: relative;
+
+        @include lg-up() {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin: 0 auto 55px auto;
+        }
+        > .button {
+            margin-top: 40px;
+            margin-bottom: 35px;
+            @include lg-up() {
+                margin: 0;
+                transform: translateX(0);
+            }
+        }
+        > .error {
+            color: $red;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: -15px;
+            left: 0;
+            transform: translateY(-100%);
+        }
+        > .wrap {
+            width: 100%;
+
+            @include lg-up() {
+                width: 65%;
+            }
+            > .file--field {
+                @include lg-up() {
+                    width: 100%;
+                    display: block;
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+    > .rule {
+        max-width: 690px;
+        margin: 0 auto;
+        width:100%;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        // margin-bottom: 80px;
+        line-height: 1.3;
+
+        .line {
+            font-size: 16px !important;
+            font-weight: bold !important;
+            @include sm-up() {
+                font-size: 20px !important;
+            }
+
+            @include md-up() {
+                font-size: 25px !important;
+            }
+        }
+        @include sm-up() {
+            max-width: 75%;
+            width:100%;
+            font-size: 20px;
+        }
+
+        @include md-up() {
+            max-width: 74%;
+            font-size: 25px;
+            margin-bottom: 140px;
+        }
+        @include lg-up() {
+            max-width: 77%;
+        }
+        @include xl-up() {
+            max-width: 65%;
+        }
+        @include xxl-up() {
+            max-width: 55%;
+        }
+    }
+}
+
+.main--reward--footer {
+    height: 90px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    // &:before {
+    //     @include gradientReverse();
+    //     content: "";
+    //     top: 1px;
+    //     transform: translateY(-50%);
+    //     z-index: -1;
+    //     width: 100%;
+    //     height: 50px;
+    //     position: absolute;
+    //     z-index: -1;
+    //     // @include sm-up(){
+    //     //     height: 600px;
+    //     // }
+    //     @include lg-up() {
+    //         height: 70px;
+    //     }
+    // }
+    @include sm-up() {
+        height: 110px;
+    }
+
+    @include md-up() {
+        height: 160px;
+    }
+    @include lg-up() {
+        height: 180px;
+    }
+    @include xl-up() {
+        height: 190px;
+    }
+    @include xl-up() {
+        height: 170px;
+    }
+    &.-static {
+        &:after {
+            width: 100%;
+            height: 100%;
+            content: "";
+            position: absolute;
+            z-index: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("../../images/hero-bg-mobile.jpg");
+
+            @include md-up() {
+                background-size: cover;
+                background-image: url("../../images/hero-bg.jpg");
+                // height: 530px;
+            }
+        }
+    }
+
+    > .boy {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        z-index: 3;
+        width: 60px;
+        img {
+            max-width: 100%;
+        }
+        @include sm-up() {
+            top: -20px;
+            width: 100px;
+        }
+        @include md-up() {
+            width: 180px;
+            top: -140px;
+            left: 20px;
+        }
+        @include lg-up() {
+            width: 220px;
+            top: -160px;
+            left: 40px;
+        }
+        @include xl-up() {
+            width: 230px;
+            top: -240px;
+            left: 40px;
+        }
+        @include xxl-up() {
+            width: 230px;
+            top: -240px;
+            left: 15%;
+        }
+    }
+    > .girl {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        z-index: 3;
+        width: 40px;
+        img {
+            max-width: 100%;
+        }
+        @include sm-up() {
+            top: -20px;
+            width: 80px;
+        }
+        @include md-up() {
+            width: 150px;
+            top: -140px;
+            right: 20px;
+        }
+        @include lg-up() {
+            width: 170px;
+            top: -140px;
+            right: 40px;
+        }
+        @include xl-up() {
+            width: 190px;
+            top: -240px;
+            right: 30px;
+        }
+        @include xxl-up() {
+            width: 180px;
+            right: 16%;
+        }
+    }
+}

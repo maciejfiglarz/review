@@ -1,0 +1,39 @@
+@use "./../../common/colors.scss" as *;
+@use "./../../common/variables.scss" as *;
+@use "./../../common/grid.scss" as *;
+@use "./../../common/fonts.scss" as *;
+@import "./../../common/typography.scss";
+
+.guard--component {
+    width: 100%;
+    margin: 0 auto 30px auto;
+    @include sm-up {
+        max-width: 80%;
+    }
+    @include md-up() {
+        max-width: 400px;
+    }
+    @include lg-up() {
+        display: flex;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.guard--section {
+    margin-bottom: 80px;
+    @include lg-up() {
+        width: 45%;
+    }
+    @include md-up() {
+        margin-bottom: 80px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.guard--title {
+    @include textEffect();
+    color: $white;
+    margin-bottom: 20px;
+}

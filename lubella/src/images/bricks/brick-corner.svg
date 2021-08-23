@@ -1,0 +1,14 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 108" width="99" height="108">
+	<title>1920</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #ffffff } 
+	</style>
+	<g id="1920">
+		<g id="tlo srodek">
+			<path id="Rectangle 3 copy 19" class="shp0" d="M45 54.03L97.97 54.03L97.97 107L45 107L45 54.03Z" />
+			<path id="Rectangle 3 copy 18" class="shp0" d="M-7 54.03L45.97 54.03L45.97 107L-7 107L-7 54.03Z" />
+			<path id="Rectangle 3 copy 17" class="shp0" d="M-7 1L45.97 1L45.97 53.97L-7 53.97L-7 1Z" />
+		</g>
+	</g>
+</svg>

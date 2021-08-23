@@ -1,0 +1,10 @@
+@use "./../../common/colors.scss" as *;
+@use "./../../common/variables.scss" as *;
+@use "./../../common/grid.scss" as *;
+@use "./../../common/fonts.scss" as *;
+@import "./../../common/typography.scss";
+
+.hero-guard {
+    display:none;
+}
+

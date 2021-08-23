@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 996" width="576" height="996">
+	<title>Rectangle 4</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #195ede } 
+		.shp1 { fill: #ffffff;stroke: #000000;stroke-width: 5 } 
+	</style>
+	<path id="Rectangle 4 copy" class="shp0" d="M8.75 95.75L567.95 104.54C572.4 104.54 576 111.1 576 119.19L547.74 954.26C547.74 962.35 544.14 968.91 539.69 968.91L20.93 996C16.49 996 12.88 989.44 12.88 981.35L0.71 110.4C0.71 102.31 4.31 95.75 8.75 95.75Z" />
+	<path id="Rectangle 4" class="shp1" d="M19.76 0.72L556.49 75.24C561.01 75.38 564.62 82.22 564.54 90.51L528.98 971.94C528.9 980.23 525.17 986.84 520.64 986.7L44.57 967.74C40.04 967.6 36.44 960.77 36.51 952.47L11.43 15.48C11.5 7.19 15.24 0.58 19.76 0.72Z" />
+</svg>

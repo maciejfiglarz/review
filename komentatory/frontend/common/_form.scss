@@ -1,0 +1,23 @@
+@import "../../../common/colors";
+
+.textarea--field {
+    border: 1px solid $color-border;
+    width: 100%;
+    min-height: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2rem;
+    padding: 10px;
+    border-radius: $border-radius;
+    background: $color-background-light;
+    color:$color-white;
+
+    &.-error {
+        border: 1px solid $color-error;
+    }
+
+    &--title {
+        max-height: 100px;
+        font-size: 1.9rem;
+    }
+}

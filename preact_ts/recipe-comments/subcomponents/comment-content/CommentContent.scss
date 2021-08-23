@@ -1,0 +1,61 @@
+.comment--content--container {
+    display: flex;
+}
+
+.comment--avatar--container {
+    margin-right: 9px;
+    @screen md {
+        margin-right: 30px;
+    }
+}
+
+.comment--avatar {
+    width: 45px;
+    @screen md {
+        width: 60px;
+    }
+}
+
+.comment--content {
+    width: 100%;
+}
+
+.comment--header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+    @screen md {
+        margin-top: 0;
+    }
+
+    > .author {
+        @apply text-basic;
+        font-size: 13px;
+        font-weight: 700;
+        @screen md {
+            margin-top: -2px;
+        }
+    }
+
+    > .date {
+        @apply text-light;
+        font-size: 13px;
+        font-weight: 700;
+    }
+}
+
+.comment--entry {
+    margin: 15px 0 30px -48px;
+
+    @screen md {
+        margin: 15px 0 30px;
+    }
+    @screen lg {
+        margin: 18px 0 30px;
+    }
+
+    > .content {
+        font-size: 17px;
+    }
+}

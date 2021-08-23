@@ -1,0 +1,94 @@
+.comment--replies {
+    margin-left: 0;
+    padding-left: 20px;
+    @screen md {
+        padding-left: 85px;
+    }
+    @screen lg {
+        padding-left: 132px;
+        margin-top: 40px;
+    }
+    @screen xl {
+        padding-left: 142px;
+    }
+
+    @screen xxl {
+        padding-left: 149px;
+    }
+    > .comment--form {
+        @screen xl {
+            margin-top: -14px;
+        }
+        > .avatar {
+            @screen lg {
+                margin-left: 5px;
+            }
+            @screen xl {
+                margin-right: 0px;
+            }
+        }
+        > .form > .picture {
+            @screen xxl {
+                right: 20px;
+            }
+        }
+    }
+}
+
+.comment--reply {
+    @screen md {
+        margin-top: 44px;
+    }
+    @screen lg {
+        margin-top: 30px;
+    }
+}
+
+.comment--footer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+    padding-left: 0;
+    @screen md {
+        padding-left: 78px;
+        justify-content: space-between;
+    }
+
+    @screen lg {
+        padding-left: 110px;
+    }
+    @screen xl {
+        padding-left: 140px;
+    }
+    @screen xxl {
+        padding-left: 130px;
+    }
+
+    > .counter {
+        @apply text-light;
+        font-weight: 700;
+        font-size: 13px;
+        margin-right: 10px;
+        @screen md {
+            margin-right: 0;
+        }
+    }
+
+    > .counter > .-arrow {
+        margin-bottom: 2px;
+        padding: 0 5px;
+        font-size: 8px;
+        display: inline-block;
+    }
+
+    > .counter > .-up {
+        transform: rotate(180deg);
+    }
+
+    > .counter > .comment {
+        width: 30px;
+        margin-right: 15px;
+        display: inline;
+    }
+}

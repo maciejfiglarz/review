@@ -1,0 +1,15 @@
+.show--more--comments {
+    margin: 12px 0;
+    > .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5.2rem;
+        padding: 0 3rem;
+        > .icon {
+            margin-left: 5px;
+            margin-top: 2px;
+            font-size: 0.8rem;
+        }
+    }
+}
