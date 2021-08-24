@@ -1,0 +1,271 @@
+.hero--trends--component {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    background-position: 5% center;
+    top: 0;
+    left: 0;
+
+    > .triangle-1 {
+        position: absolute;
+        z-index: -1;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 25%;
+        right: 3%;
+        // outline: 1px solid red;
+    }
+    > .triangle-2 {
+        position: absolute;
+        z-index: -1;
+        width: 18rem;
+        height: 18rem;
+        top: 37%;
+        right: -29%;
+        // outline: 1px solid yellow;
+    }
+    > .triangle-3 {
+        position: absolute;
+        z-index: -1;
+        width: 13rem;
+        height: 13rem;
+        top: 53rem;
+        left: 31%;
+        // outline: 1px solid green;
+    }
+    > .triangle-4 {
+        position: absolute;
+        z-index: -1;
+        width: 22.5rem;
+        height: 22.5rem;
+        top: 16%;
+        left: -47%;
+        // outline: 1px solid purple;
+    }
+    > .triangle-5 {
+        display: none;
+        // outline: 1px solid orange;
+    }
+    > .triangle-6 {
+        display: none;
+        // outline: 1px solid blue;
+    }
+    > .triangle-7 {
+        display: none;
+        // outline: 1px solid blue;
+    }
+}
+
+.hero--trends--content {
+    position: fixed;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: left;
+    width: 100%;
+    z-index: 1;
+    > .title {
+        font-size: 4.2rem;
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+        line-height: 1.1;
+        text-align: left;
+        > em,
+        > i {
+            @apply text-primary;
+            display: block;
+            font-style: italic;
+        }
+    }
+    > .wrap {
+        position: relative;
+    }
+}
+
+.hero--trends--description {
+    > .text {
+        font-size: 1.6rem;
+        //#todo
+        // @apply font-mediumitalic;
+        @apply font-medium;
+        margin-bottom: 1.2rem;
+        strong {
+            @apply font-medium text-white;
+        }
+        > .fulltext {
+            @apply text-blue-text;
+        }
+    }
+    > .label {
+        margin-top: 2rem;
+        display: none;
+        > .name {
+            @apply font-light;
+            font-size: 2rem;
+            display: block;
+        }
+        > .position {
+            @apply font-light;
+            opacity: 0.3;
+            font-size: 1.4rem;
+        }
+    }
+}
+.hero--trends--author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > .avatar {
+        width: 30%;
+        position: relative;
+        > .scroll {
+            position: absolute;
+            top: calc(100% + 1.5rem);
+            left: 0;
+            transform: scale(0.7);
+            display: none;
+        }
+    }
+    > .label {
+        width: 65%;
+        margin-top: 2rem;
+        margin-left: 2rem;
+        > .name {
+            @apply font-light;
+            font-size: 2rem;
+            display: block;
+        }
+        > .position {
+            @apply font-light;
+            opacity: 0.3;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@screen sm {
+}
+@screen md {
+    .hero--trends--component {
+        > .triangle-1 {
+            top: 12%;
+            right: 70%;
+        }
+        > .triangle-2 {
+            top: 20%;
+            right: 40%;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        > .triangle-3 {
+            left: 54%;
+            top: 34vh;
+            width: 42.5rem;
+            height: 42.5rem;
+        }
+        > .triangle-4 {
+            left: -37%;
+        }
+        > .triangle-5 {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 60.5rem;
+            height: 60.5rem;
+            top: -43%;
+            right: 15%;
+            opacity: 0.3;
+            transform: rotate(82deg);
+        }
+        > .triangle-6 {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 2.5rem;
+            height: 2.5rem;
+            top: 27%;
+            right: 8%;
+        }
+        > .triangle-7 {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            width: 12.5rem;
+            height: 12.5rem;
+            top: 42%;
+            right: 2%;
+        }
+    }
+    .hero--trends--content {
+        top: 17rem;
+        > .wrap {
+            width: 78%;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-start;
+        }
+    }
+    .hero--trends--description {
+        min-width: 70%;
+        > .text {
+            font-size: 2.2rem;
+        }
+        > .label {
+            display: block;
+        }
+    }
+    .hero--trends--author {
+        .avatar {
+            width: 14rem;
+            margin-right: 4rem;
+            > .scroll {
+                display: block;
+            }
+        }
+        > .label {
+            display: none;
+        }
+    }
+}
+@screen lg {
+    .hero--trends--component {
+        > .triangle-2 {
+            right: 50%;
+        }
+        > .triangle-3 {
+            top: 23rem;
+            left: 62%;
+        }
+        > .triangle-5 {
+            top: -43%;
+        }
+    }
+    .hero--trends--description {
+        > .text {
+            padding-top: 6rem;
+            font-size: 2.2rem;
+        }
+    }
+    .hero--trends--content {
+        .title {
+            font-size: 8.3rem;
+        }
+        > .wrap {
+            width: 62%;
+        }
+    }
+    .hero--trends--author {
+        .avatar {
+            width: 17rem;
+            > .scroll {
+                top: calc(100% + 0.8rem);
+                transform: scale(0.9);
+            }
+        }
+    }
+}

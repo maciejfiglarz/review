@@ -1,0 +1,215 @@
+.modal--wrapper {
+    display: none;
+    &.-open {
+        display: block;
+    }
+    > .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+}
+
+.modal--component {
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // @apply bg-opacity-70 bg-black;
+    width: 90%;
+    // min-height: 300px;
+    max-width: 100rem;
+    min-height: 10rem;
+
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @apply bg-blue-dark bg-opacity-50;
+
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @apply border border-primary;
+        @apply bg-blue-dark;
+        @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {
+            backdrop-filter: blur(2rem);
+            background-color: transparent;
+        }
+    }
+
+    > .close {
+        display: block;
+        margin-left: auto;
+        margin-top: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    > .loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.person--modal {
+    padding: 0 2.4rem 0 2.4rem;
+}
+
+.person--modal--info {
+    > .image {
+        margin: 0 auto;
+        text-align: center;
+    }
+    > .label {
+        text-align: center;
+        margin-bottom: 2rem;
+        > .name {
+            font-size: 2rem;
+        }
+        > .position {
+            opacity: 0.3;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.person--modal--content {
+    > .title {
+        font-size: 2.2rem;
+        @apply font-light text-primary;
+        margin: 2rem 0 1rem 0;
+    }
+}
+
+.person--modal--list {
+    overflow-y: auto;
+    max-height: 200px;
+    margin-bottom: 2.5rem;
+    &::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    &::-webkit-scrollbar-track {
+        // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        @apply bg-primary outline-primary;
+    }
+    > .link {
+        margin: 0 auto;
+
+        &.-green {
+            > .category {
+                @apply text-green;
+            }
+        }
+        &.-yellow {
+            > .category {
+                @apply text-yellow;
+            }
+        }
+        &.-orange {
+            > .category {
+                @apply text-orange;
+            }
+        }
+
+        > .category {
+            font-size: 1.2rem;
+            @apply text-primary;
+            margin-bottom: 1rem;
+        }
+        > .title {
+            position: relative;
+            display: block;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            line-height: 1.4;
+            padding-left: 1.3rem;
+            &::after {
+                content: "";
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 3px;
+                position: absolute;
+                @apply bg-primary;
+            }
+        }
+    }
+}
+
+@screen md {
+    .person--modal {
+        padding: 2rem 2.4rem 0 2.4rem;
+        display: flex;
+        justify-content: space-between;
+
+        >.person--modal--info {
+            width: 47%;
+        }
+        >.person--modal--content {
+            width: 47%;
+        }
+    }
+    .person--modal--list {
+        max-height: 400px;
+        margin-bottom: 2.5rem;
+        > .link {
+            > .category {
+                font-size: 1.4rem;
+            }
+            > .title {
+                font-size: 2.7rem;
+            }
+        }
+    }
+    .person--modal--info {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > .image {
+            text-align: left;
+            max-width: 50.8rem;
+            margin-left: -2.4rem;
+            margin-right: -5rem;
+        }
+        > .label {
+            margin-top: 2.5rem;
+        }
+    }
+    .person--modal--content {
+        > .title {
+            font-size: 2.2rem;
+        }
+    }
+    .modal--component {
+        > .close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            margin: 0;
+        }
+    }
+
+}

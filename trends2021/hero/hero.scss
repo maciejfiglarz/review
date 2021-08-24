@@ -1,0 +1,346 @@
+//._scrolled {
+//    .hero--component {
+//        filter: blur(2rem);
+//        transition: filter 0.65s ease;
+//
+//        @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {
+//            filter: blur(0);
+//        }
+//    }
+//}
+
+.hero--component {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    > .picture {
+        width:100%;
+        height:100%;
+        position: fixed;
+        z-index: 1;
+        // margin-top:10%;
+        .cover {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: center center;
+        }
+    
+    }
+    > video {
+        &.-desktop {
+            display: none;
+        }
+        &.-mobile-high {
+            display: none;
+        }
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        object-fit: cover;
+        // filter: brightness(0.8) contrast(1.2);
+        object-position: center center;
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            &.-mobile {
+                display: none;
+            }
+            &.-mobile-high {
+                display: block;
+            }
+        }
+    }
+
+    > .triangle-1 {
+        display: block;
+        content: "";
+        height: 3rem;
+        width: 3rem;
+        position: absolute;
+        top: 47rem;
+        right: 33%;
+        z-index: 3;
+    }
+    &::before {
+        display: block;
+        content: "";
+        background-image: url("../../../images/triangles/triangle-1.svg");
+        background-repeat: no-repeat;
+        background-size: 3.7rem 3.7rem;
+        height: 3.7rem;
+        width: 3.7rem;
+        position: absolute;
+        top: 30rem;
+        right: 15%;
+        z-index: 3;
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        background-image: url("../../../images/triangles/triangle-3.svg");
+        background-repeat: no-repeat;
+        background-size: 22.7rem 22.7rem;
+        height: 22.7rem;
+        width: 22.7rem;
+        position: absolute;
+        top: 51rem;
+        right: 30%;
+        z-index: 3;
+    }
+
+    > .content {
+        position: fixed;
+        // top: 15%;
+        top: 18rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: left;
+        width: 90%;
+        z-index: 3;
+        &::before {
+            display: block;
+            content: "";
+            background-image: url("../../../images/hero/triangle-4.svg");
+            background-size: 22rem 22rem;
+            height: 22rem;
+            width: 22rem;
+            position: absolute;
+            top: 11rem;
+            right: -50%;
+            z-index: -1;
+            transform: rotate(28deg);
+        }
+        > .title {
+            font-size: 4.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+            line-height: 1.1;
+            > em,
+            > i {
+                @apply text-primary;
+                font-style: italic;
+            }
+        }
+        > .description {
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 78%;
+            @apply font-light;
+            margin-bottom: 1.2rem;
+            &.-second {
+                opacity: 0.7;
+                max-width: 60%;
+            }
+        }
+        > .btn--mousescroll {
+            margin-top: 1rem;
+        }
+    }
+}
+@media only screen and (max-width: 370px) {
+    .hero--component {
+        &:after {
+            top: 62rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .hero--component {
+        > .content {
+            top: 16rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+    .hero--component {
+        > .content {
+            width: 65% !important;
+            left: 35% !important;
+        }
+    }
+}
+
+@screen sm {
+    .hero--component {
+        // background-position: -20% center;
+
+        > .content {
+            text-align: left;
+            // outline: 1px solid yellow;
+            width: 80%;
+            > .title {
+                font-size: 4.2rem;
+                margin-bottom: 1.5rem;
+                @apply font-medium;
+                > em,
+                > i {
+                    display: block;
+                }
+            }
+            > .description {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+                &.-second {
+                    max-width: 65%;
+                }
+            }
+        }
+    }
+}
+
+@screen md {
+    .hero--component {
+        // background-position: -50% center;
+        min-height: 100vh;
+        // background-image: url('../../../images/hero/cover.jpg');
+        > video {
+            &.-mobile {
+                display: none;
+            }
+            &.-desktop {
+                display: block;
+                top: 0;
+            }
+            &.-mobile-high {
+                display: none;
+            }
+        }
+        > .triangle-1 {
+            display: none;
+        }
+        &::before {
+            display: block;
+            content: "";
+            background-image: url("../../../images/hero/triangle-1.svg");
+            background-repeat: no-repeat;
+            // background-size: 38px 38px;
+            height: 98px;
+            width: 98px;
+            position: absolute;
+            top: 17%;
+            right: 35%;
+        }
+        &::after {
+            display: block;
+            content: "";
+            background-image: url("../../../images/hero/triangle-2.svg");
+            background-repeat: no-repeat;
+            background-size: 38px 38px;
+            height: 38px;
+            width: 38px;
+            position: absolute;
+            top: 40%;
+            right: 3%;
+        }
+        > .content {
+            text-align: left;
+            // outline: 1px solid red;
+            width: 85%;
+            top: 22rem;
+
+            &::before {
+                display: block;
+                content: "";
+                background-image: url("../../../images/hero/triangle-4.svg");
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: unset;
+                height: 130%;
+                width: 100%;
+                position: absolute;
+                top: -20%;
+                left: 0;
+                z-index: -1;
+                opacity: 0.3;
+                transform: rotate(0);
+            }
+
+            &::after {
+                display: block;
+                content: "";
+                background-image: url("../../../images/hero/triangle-3.svg");
+                background-repeat: no-repeat;
+                background-size: 68px 68px;
+                height: 68px;
+                width: 68px;
+                position: absolute;
+                bottom: -25%;
+                left: 30%;
+            }
+            > .title {
+                font-size: 8.3rem;
+                margin-bottom: 2rem;
+                @apply font-medium;
+                > .second {
+                    display: block;
+                }
+            }
+            > .description {
+                margin-bottom: 2rem;
+                font-size: 2rem;
+                &.-second {
+                    max-width: 58%;
+                }
+            }
+            > .btn--mousescroll {
+                display: none;
+            }
+        }
+    }
+}
+
+@screen lg {
+    .hero--component {
+        // background-position: 40rem center;
+        &::before {
+            top: 17%;
+            right: 35%;
+        }
+        &::after {
+            top: 30rem;
+        }
+        > .content {
+            // outline: 1px solid green;
+            width: 65%;
+            left: 40%;
+
+            &::after {
+                top: 44rem;
+            }
+            > .title {
+                margin-bottom: 4rem;
+            }
+            > .description {
+                margin-bottom: 4rem;
+                &.-second {
+                    max-width: 52%;
+                }
+            }
+        }
+    }
+}
+
+@screen xl {
+    .hero--component {
+        // background-position: center center;
+        // background-size: 148%;
+    }
+}

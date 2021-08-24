@@ -1,0 +1,35 @@
+.switcher--component {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    > .item {
+        margin: 0 1rem;
+        @apply text-white;
+        &.-small {
+            font-size: 1.2rem;
+        }
+        &.-middle {
+            font-size: 1.6rem;
+        }
+        &.-large {
+            font-size: 2rem;
+        }
+
+        &.-color {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        &.-black-on-white {
+            @apply bg-white  text-black;
+        }
+
+        &.-black-on-yellow {
+            @apply bg-yellow  text-black;
+        }
+        &.-white-on-black {
+            @apply bg-black;
+        }
+
+    }
+}
