@@ -1,11 +1,11 @@
 import { Fragment, h, render } from 'preact';
 import { useState, useRef } from 'preact/hooks';
 
-import Modal from "./../../modal/Modal";
+import Modal from "../../modal/Modal";
 import useApi from '../../../lib/api/useApi';
 
-import { displayError, isEmailNotAvailable, clearErrors } from "./../../../lib/form/validation";
-import { renderRow } from "./../../../lib/form/fields";
+import { displayError, isEmailNotAvailable, clearErrors } from "../../../lib/form/validation";
+import { renderRow } from "../../../lib/form/fields";
 import LoginButtons from '../login-buttons/LoginButtons';
 
 const LoginForm = ({ setType, setIsSending, uniqueId }) => {

@@ -2,16 +2,16 @@
 import { h, Fragment, render } from 'preact';
 import { useEffect, useState, useRef } from 'preact/hooks';
 
-import useApi from "./../../../lib/api/useApi";
+import useApi from "../../../lib/api/useApi";
 import windowScroll from '../../../helpers/windowBlockScroll';
 import effects from '../../../lib/effects';
 
-import { displayError, isEmailNotAvailable, clearErrors } from "./../../../lib/form/validation";
-import { renderRow } from "./../../../lib/form/fields";
+import { displayError, isEmailNotAvailable, clearErrors } from "../../../lib/form/validation";
+import { renderRow } from "../../../lib/form/fields";
 
-import Modal from "../../../components/modal/Modal";
-import MainReward from "./../../../components/main-reward/MainReward";
-import Authentication from "./../../../components/authentication/Authentication";
+import Modal from "../../modal/Modal";
+import MainReward from "../../main-reward/MainReward";
+import Authentication from "../../authentication/Authentication";
 
 
 

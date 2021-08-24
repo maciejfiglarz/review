@@ -3,14 +3,14 @@ import "./contact-form.scss";
 import { h, Fragment } from 'preact';
 import { useEffect, useState, useRef } from 'preact/hooks';
 import windowScroll from '../../helpers/windowBlockScroll';
-import iconClose from "./../../images/icons/icon-close.png";
-import Loader from "./../loader/Loader";
-import LoginForm from "./../authentication/login-form/LoginForm";
-import Modal from "./../modal/Modal";
+import iconClose from "../../images/icons/icon-close.png";
+import Loader from "../loader/Loader";
+import LoginForm from "../authentication/login-form/LoginForm";
+import Modal from "../modal/Modal";
 
-import { displayError, isEmailNotAvailable, clearErrors } from "./../../lib/form/validation";
-import { renderRow, renderTextarea } from "./../../lib/form/fields";
-import useApi from "./../.././lib/api/useApi";
+import { displayError, isEmailNotAvailable, clearErrors } from "../../lib/form/validation";
+import { renderRow, renderTextarea } from "../../lib/form/fields";
+import useApi from "../../lib/api/useApi";
 import effects from '../../lib/effects';
 
 const ContactForm = ({ isLogged }) => {

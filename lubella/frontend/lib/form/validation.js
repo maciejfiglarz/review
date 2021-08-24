@@ -1,4 +1,4 @@
-import { useApiStatic } from "./../api/useApi";
+import { useApiStatic } from "../api/useApi";
 
 
 const displayError = (ref, msg) => {

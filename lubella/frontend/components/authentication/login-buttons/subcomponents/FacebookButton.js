@@ -1,7 +1,7 @@
 import { h, Fragment } from 'preact';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
 import useApi from '../../../../lib/api/useApi';
-import facebookIcon from "./../../../../images/icons/auth-facebook.svg";
+import facebookIcon from "../../../../images/icons/auth-facebook.svg";
 
 const FacebookButton = () => {
 

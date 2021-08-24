@@ -3,8 +3,8 @@ import "./modal.scss";
 import { h, Fragment } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import windowScroll from '../../helpers/windowBlockScroll';
-import iconClose from "./../../images/icons/icon-close.png";
-import Loader from "./../loader/Loader";
+import iconClose from "../../images/icons/icon-close.png";
+import Loader from "../loader/Loader";
 
 
 const Modal = ({ children, isOpen, setIsOpen, isFlex, isSending, IsFleOn, hashUrl, scrollClass }) => {

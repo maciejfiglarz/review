@@ -5,9 +5,9 @@ import { useEffect, useState } from 'preact/hooks';
 
 import Item from "./subcomponents/Item";
 
-import useApi from "./../../lib/api/useApi";
+import useApi from "../../lib/api/useApi";
 
-import MainReward from "./../../components/main-reward/MainReward";
+import MainReward from "../main-reward/MainReward";
 
 const Quiz = ({ isIndex }) => {
     const [keywords, setKeywords] = useState({});

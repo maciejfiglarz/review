@@ -1,7 +1,7 @@
 import { h, Fragment } from 'preact';
 import { GoogleLogin } from 'react-google-login';
 import useApi from '../../../../lib/api/useApi';
-import googleIcon from "./../../../../images/icons/auth-google.svg";
+import googleIcon from "../../../../images/icons/auth-google.svg";
 
 const GoogleButton = () => {
 
